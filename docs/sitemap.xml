@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://my.xyemy.com/post/2022/05/25/firstblog.html</loc>
+    <lastmod>2022-05-25T16:11:10+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/</loc>
+    <lastmod>2022-05-25T16:11:10+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/post.html</loc>
+    <lastmod>2022-05-25T16:11:10+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/categories.html</loc>
+  </url><url>
+    <loc>http://my.xyemy.com/tags.html</loc>
+  </url><url>
+    <loc>http://my.xyemy.com/search.html</loc>
+  </url>
+</urlset>

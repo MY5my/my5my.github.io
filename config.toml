@@ -1,0 +1,30 @@
+baseURL = "http://my.xyemy.com/"
+languageCode = "zh-CN"
+title = "miao blog"
+
+theme = "maupassant"
+
+summaryLength = 20
+uglyurls = true
+
+[author]
+name = "enenen"
+
+
+[params]
+localSearch = true
+fancybox = true
+busuanzi = true
+relativeURLs = false
+subtitle = "只有魔法才能打败魔法"
+customJS = ['douban.js']
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params.utteranc]
+    enable = false
+    repo = "my5my/my5my.github.io"    # 存储评论的Repo，格式为 owner/repo
+    issueTerm = "pathname"  #表示你选择以那种方式让github issue的评论和你的文章关联。
+    theme = "github-light" # 样式主题，有github-light和github-dark两
