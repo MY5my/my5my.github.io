@@ -1,7 +1,7 @@
 ---
 title: "Git 撤回commit以及回退版本"
 date: 2022-06-03T10:57:24+08:00
-draft: true
+draft: false
 tags: ["Git"]
 isCJKLanguage: true
 categories: ["Git"]
