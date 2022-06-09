@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>去除空格 | miao blog</title>
-    <meta property="og:title" content="去除空格 - miao blog">
+    <title>表单操作 | miao blog</title>
+    <meta property="og:title" content="表单操作 - miao blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2022-06-09T15:38:24&#43;08:00'>
+    <meta property="article:published_time" content='2022-06-09T15:41:12&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2022-06-09T15:38:24&#43;08:00'>
+    <meta property="article:modified_time" content='2022-06-09T15:41:12&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="去除空格">
+    <meta name="description" content="表单操作">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/post/2022/06/09/%E5%8E%BB%E9%99%A4%E7%A9%BA%E6%A0%BC.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2021/05/09/%E8%A1%A8%E5%8D%95%E6%93%8D%E4%BD%9C.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -72,7 +72,7 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">去除空格</h1>
+            <h1 class="post-title">表单操作</h1>
         </header>
         <date class="post-meta meta-date">
             2022年6月9日
@@ -81,7 +81,9 @@
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='/categories/js'>Js</a></span>
+            <span class="meta-category"><a href='/categories/html'>HTML</a></span>
+            
+            <span class="meta-category"><a href='/categories/%E8%A1%A8%E5%8D%95'>表单</a></span>
             
         </div>
         
@@ -93,15 +95,25 @@
         
         
         <div class="post-content">
-            <h2 id="去除空格">去除空格</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> trim<span style="color:#f92672">(</span>str<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    // 去除头和尾
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> str.replace<span style="color:#f92672">(</span>/^<span style="color:#f92672">[</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">||</span><span style="color:#e6db74">&#34;　&#34;</span><span style="color:#f92672">]</span>*/,<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span>.replace<span style="color:#f92672">(</span>/<span style="color:#f92672">[</span><span style="color:#e6db74">&#34; &#34;</span>|<span style="color:#e6db74">&#34;　&#34;</span><span style="color:#f92672">]</span>*$/,<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span>    //去除所有空格
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> str.replace<span style="color:#f92672">(</span>/<span style="color:#ae81ff">\s</span>/g,<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span>    //去除右边所有空格
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> str.replace<span style="color:#f92672">(</span>/<span style="color:#f92672">(</span><span style="color:#ae81ff">\s</span>*$<span style="color:#f92672">)</span>/g,<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+            <h2 id="表单操作">表单操作</h2>
+<blockquote>
+<p>radio操作
+获取选中的值</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[name=&#34;testradio&#34;]:checked&#39;</span><span style="color:#66d9ef">)</span>.val<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input:radio:checked&#39;</span><span style="color:#66d9ef">)</span>.val<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[@name=&#34;testradio&#34;][checked]&#39;</span><span style="color:#66d9ef">)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[name=&#34;testradio&#34;]&#39;</span><span style="color:#66d9ef">)</span>.filter<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:checked&#39;</span><span style="color:#f92672">)</span>;
+</span></span></code></pre></div><blockquote>
+<p>遍历</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[name=&#34;testradio&#34;]&#39;</span><span style="color:#66d9ef">)</span>.each<span style="color:#f92672">(</span><span style="color:#66d9ef">function</span><span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>    alert<span style="color:#f92672">(</span>this.value<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">})</span>;
+</span></span></code></pre></div><blockquote>
+<p>取具体某个radio的值，比如第二个radio的值</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[name=&#34;testradio&#34;]:eq(1)&#39;</span><span style="color:#66d9ef">)</span>.val<span style="color:#f92672">()</span>
 </span></span></code></pre></div>
         </div>
 
@@ -110,12 +122,23 @@
 
         
 
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/2022/06/09/input%E9%AA%8C%E8%AF%81.html">Input验证</a></li>
+        
+    </ul>
+</div>
+
 
         <div class="post-meta meta-tags">
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/%E7%A9%BA%E6%A0%BC'>空格</a></li>
+                <li><a href='/tags/html'>HTML</a></li>
+                
+                <li><a href='/tags/%E8%A1%A8%E5%8D%95'>表单</a></li>
                 
             </ul>
             

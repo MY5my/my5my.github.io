@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>html on miao blog</title>
+    <title>HTML on miao blog</title>
     <link>http://my.xyemy.com/categories/html.html</link>
-    <description>Recent content in html on miao blog</description>
+    <description>Recent content in HTML on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 09 Jun 2022 15:04:08 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 15:41:12 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>表单操作</title>
+      <link>http://my.xyemy.com/post/2021/05/09/%E8%A1%A8%E5%8D%95%E6%93%8D%E4%BD%9C.html</link>
+      <pubDate>Thu, 09 Jun 2022 15:41:12 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/05/09/%E8%A1%A8%E5%8D%95%E6%93%8D%E4%BD%9C.html</guid>
+      <description>表单操作 radio操作 获取选中的值 $(&amp;#39;input[name=&amp;#34;testradio&amp;#34;]:checked&amp;#39;).val(); $(&amp;#39;input:radio:checked&amp;#39;).val(); $(&amp;#39;input[@name=&amp;#34;testradio&amp;#34;][checked]&amp;#39;);</description>
+    </item>
+    
     <item>
       <title>Input验证</title>
       <link>http://my.xyemy.com/post/2022/06/09/input%E9%AA%8C%E8%AF%81.html</link>

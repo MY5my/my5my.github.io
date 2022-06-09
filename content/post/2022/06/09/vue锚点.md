@@ -2,7 +2,7 @@
 title: "Vue锚点"
 date: 2022-06-09T14:06:01+08:00
 draft: false
-tags: ["Vue锚点定位"]
+tags: ["锚点定位"]
 isCJKLanguage: true
 categories: ["Vue"]
 ---

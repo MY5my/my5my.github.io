@@ -2,9 +2,9 @@
 title: "Input验证"
 date: 2022-06-09T15:04:08+08:00
 draft: false
-tags: ["html","表单"]
+tags: ["HTML","表单"]
 isCJKLanguage: true
-categories: ["html"]
+categories: ["HTML","表单"]
 ---
 
 

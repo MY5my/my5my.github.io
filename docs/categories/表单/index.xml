@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HTML on miao blog</title>
-    <link>http://my.xyemy.com/tags/html.html</link>
-    <description>Recent content in HTML on miao blog</description>
+    <title>表单 on miao blog</title>
+    <link>http://my.xyemy.com/categories/%E8%A1%A8%E5%8D%95.html</link>
+    <description>Recent content in 表单 on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 09 Jun 2022 15:41:12 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 15:41:12 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/%E8%A1%A8%E5%8D%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>表单操作</title>
       <link>http://my.xyemy.com/post/2021/05/09/%E8%A1%A8%E5%8D%95%E6%93%8D%E4%BD%9C.html</link>
