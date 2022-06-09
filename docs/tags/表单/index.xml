@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>表单 on miao blog</title>
+    <link>http://my.xyemy.com/tags/%E8%A1%A8%E5%8D%95.html</link>
+    <description>Recent content in 表单 on miao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 09 Jun 2022 15:04:08 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/%E8%A1%A8%E5%8D%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Input验证</title>
+      <link>http://my.xyemy.com/post/2022/06/09/input%E9%AA%8C%E8%AF%81.html</link>
+      <pubDate>Thu, 09 Jun 2022 15:04:08 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2022/06/09/input%E9%AA%8C%E8%AF%81.html</guid>
+      <description>input验证 只能输入正数，负数，小数 onkeyup=&amp;#34;value=value.replace(/[^\-?\d.]/g,&amp;#39;&amp;#39;)&amp;#34;</description>
+    </item>
+    
+  </channel>
+</rss>

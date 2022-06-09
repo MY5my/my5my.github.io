@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vue on miao blog</title>
-    <link>http://my.xyemy.com/tags/vue.html</link>
-    <description>Recent content in Vue on miao blog</description>
+    <title>Vue锚点定位 on miao blog</title>
+    <link>http://my.xyemy.com/tags/vue%E9%94%9A%E7%82%B9%E5%AE%9A%E4%BD%8D.html</link>
+    <description>Recent content in Vue锚点定位 on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 09 Jun 2022 14:06:01 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 14:06:01 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/vue%E9%94%9A%E7%82%B9%E5%AE%9A%E4%BD%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vue锚点</title>
       <link>http://my.xyemy.com/post/2022/06/09/vue%E9%94%9A%E7%82%B9.html</link>
