@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>Checkbox</title>
+      <link>http://my.xyemy.com/post/2021/01/09/checkbox.html</link>
+      <pubDate>Sat, 09 Jan 2021 16:41:47 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/01/09/checkbox.html</guid>
+      <description>遍历未勾选的 var chk_value=[] $(&amp;#34;input</description>
+    </item>
+    
+    <item>
       <title>Input验证</title>
       <link>http://my.xyemy.com/post/2021/01/09/input%E9%AA%8C%E8%AF%81.html</link>
       <pubDate>Sat, 09 Jan 2021 14:04:08 +0800</pubDate>

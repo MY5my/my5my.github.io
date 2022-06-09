@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>checkbox on miao blog</title>
+    <link>http://my.xyemy.com/tags/checkbox.html</link>
+    <description>Recent content in checkbox on miao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 09 Jan 2021 16:41:47 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/checkbox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Checkbox</title>
+      <link>http://my.xyemy.com/post/2021/01/09/checkbox.html</link>
+      <pubDate>Sat, 09 Jan 2021 16:41:47 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/01/09/checkbox.html</guid>
+      <description>遍历未勾选的 var chk_value=[] $(&amp;#34;input</description>
+    </item>
+    
+  </channel>
+</rss>
