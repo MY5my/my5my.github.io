@@ -16,7 +16,7 @@ localSearch = true
 fancybox = true
 busuanzi = true
 relativeURLs = false
-subtitle = "只有魔法才能打败魔法"
+subtitle = "要做一个爱笑的小仙女"
 customJS = ['douban.js']
 
 [taxonomies]

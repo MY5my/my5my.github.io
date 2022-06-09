@@ -6,7 +6,16 @@
     <description>Recent content in Tags on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 03 Jun 2022 10:57:24 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 14:06:01 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue</title>
+      <link>http://my.xyemy.com/tags/vue.html</link>
+      <pubDate>Thu, 09 Jun 2022 14:06:01 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/tags/vue.html</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Git</title>
       <link>http://my.xyemy.com/tags/git.html</link>

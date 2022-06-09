@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Git 撤回commit以及回退版本 | miao blog</title>
-    <meta property="og:title" content="Git 撤回commit以及回退版本 - miao blog">
+    <title>Vue锚点 | miao blog</title>
+    <meta property="og:title" content="Vue锚点 - miao blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2022-06-03T10:57:24&#43;08:00'>
+    <meta property="article:published_time" content='2022-06-09T14:06:01&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2022-06-03T10:57:24&#43;08:00'>
+    <meta property="article:modified_time" content='2022-06-09T14:06:01&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Git 撤回commit以及回退版本">
+    <meta name="description" content="Vue锚点">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/post/2022/06/03/git.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2022/06/09/vue%E9%94%9A%E7%82%B9.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -72,16 +72,16 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Git 撤回commit以及回退版本</h1>
+            <h1 class="post-title">Vue锚点</h1>
         </header>
         <date class="post-meta meta-date">
-            2022年6月3日
+            2022年6月9日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='/categories/git'>Git</a></span>
+            <span class="meta-category"><a href='/categories/vue%E9%94%9A%E7%82%B9%E5%AE%9A%E4%BD%8D'>Vue锚点定位</a></span>
             
         </div>
         
@@ -93,71 +93,49 @@
         
         
         <div class="post-content">
-            <h2 id="查看提交记录">查看提交记录</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git log
-</span></span><span style="display:flex;"><span>commit 3cb10f20846181a579b2d75e6aaa7afbd9416a4b <span style="color:#f92672">(</span>HEAD -&gt; stable, origin/stable<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Author: Username &lt;xxx@outlook.com&gt;
-</span></span><span style="display:flex;"><span>Date:   Thu May <span style="color:#ae81ff">6</span> 14:01:18 <span style="color:#ae81ff">2021</span> +0800
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    提交备注1
-</span></span><span style="display:flex;"><span>commit 4709d2919a9ba1b6cc76b25512c4539c9119fe21
-</span></span><span style="display:flex;"><span>Author: Username &lt;xxx@outlook.com&gt;
-</span></span><span style="display:flex;"><span>Date:   Thu May <span style="color:#ae81ff">6</span> 16:22:08 <span style="color:#ae81ff">2021</span> +0800
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    提交备注2
-</span></span><span style="display:flex;"><span>commit 30b174cef05c0142dfc5cad31bc22091c4862a8f
-</span></span><span style="display:flex;"><span>Author: Username &lt;xxx@outlook.com&gt;
-</span></span><span style="display:flex;"><span>Date:   Thu May <span style="color:#ae81ff">6</span> 10:50:19 <span style="color:#ae81ff">2021</span> +0800
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    提交备注3
-</span></span></code></pre></div><blockquote>
-<p>commit 后面就是提交记录的id</p>
+            <h2 id="页面可滚动时才有用">页面可滚动时才有用</h2>
+<blockquote>
+<p>最简单的办法</p>
 </blockquote>
-<h1 id="在还没有push代码时只是commit了想撤销commit">在还没有push代码时，只是commit了，想撤销commit</h1>
-<h2 id="选择撤销版本">选择撤销版本</h2>
-<ul>
-<li>
-<p>HEAD^或HEAD~1 表示上一个commit，或HEAD~1。</p>
-</li>
-<li>
-<p>两次commit 都想撤销时使用HEAD~2</p>
-</li>
-<li>
-<p>想要撤销到某一版本时 把HEAD~换成提交记录的id</p>
-</li>
-</ul>
-<h2 id="不改动本地项目代码只撤销commit">不改动本地项目代码，只撤销commit</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git reset --soft HEAD^
-</span></span></code></pre></div><h2 id="删除本地改动撤销commit并撤销add">删除本地改动，撤销commit并撤销add</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git reset --hard HEAD^
-</span></span></code></pre></div><blockquote>
-<p>到这一步 已经撤销了对应的commit  重新提交即可</p>
-</blockquote>
-<h1 id="已经push的项目想要回退到提交备注2">已经push的项目，想要回退到“提交备注2”</h1>
-<h2 id="回滚">回滚</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git reset --soft 4709d2919a9ba1b6cc76b25512c4539c9119fe21
-</span></span></code></pre></div><h2 id="查看提交记录-1">查看提交记录</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git log
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>html：
+</span></span><span style="display:flex;"><span>&lt;div&gt;
+</span></span><span style="display:flex;"><span>    &lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;div id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Abstract&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            AbstractAbstractAbstractAbstractAbstract
+</span></span><span style="display:flex;"><span>        &lt;/div&gt;
+</span></span><span style="display:flex;"><span>        &lt;div id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Cited&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            CitedCitedCitedCitedCitedCited
+</span></span><span style="display:flex;"><span>        &lt;/div&gt;
+</span></span><span style="display:flex;"><span>    &lt;/div&gt;
+</span></span><span style="display:flex;"><span>    &lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;right&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;ul&gt;
+</span></span><span style="display:flex;"><span>            &lt;li  @click<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;returnTop(&#39;#Abstract&#39;)&#34;</span>&gt;&lt;/li&gt;    
+</span></span><span style="display:flex;"><span>            &lt;li  @click<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;returnTop(&#39;#Cited&#39;)&#34;</span>&gt;&lt;/li&gt;    
+</span></span><span style="display:flex;"><span>        &lt;/ul&gt;
+</span></span><span style="display:flex;"><span>    &lt;/div&gt;
+</span></span><span style="display:flex;"><span>&lt;/div&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>commit 4709d2919a9ba1b6cc76b25512c4539c9119fe21
-</span></span><span style="display:flex;"><span>Author: Username &lt;xxx@outlook.com&gt;
-</span></span><span style="display:flex;"><span>Date:   Thu May <span style="color:#ae81ff">6</span> 16:22:08 <span style="color:#ae81ff">2021</span> +0800
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    提交备注2
-</span></span><span style="display:flex;"><span>commit 30b174cef05c0142dfc5cad31bc22091c4862a8f
-</span></span><span style="display:flex;"><span>Author: Username &lt;xxx@outlook.com&gt;
-</span></span><span style="display:flex;"><span>Date:   Thu May <span style="color:#ae81ff">6</span> 10:50:19 <span style="color:#ae81ff">2021</span> +0800
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    提交备注3
+</span></span><span style="display:flex;"><span>js:
+</span></span><span style="display:flex;"><span>returnTop<span style="color:#f92672">(</span>url<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>    document.getElementById<span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>.scrollIntoView<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><blockquote>
-<p>最上面的 &ldquo;提交备注1&rdquo; 3cb10f20846181a579b2d75e6aaa7afbd9416a4b 已经看不到了，这表示撤销成功了。</p>
+<p>第二种</p>
 </blockquote>
-<h2 id="本地的代码强制推到远程">本地的代码强制推到远程</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git push origin test --force  <span style="color:#75715e">#test是分支名字</span>
-</span></span></code></pre></div><blockquote>
-<p>结束</p>
-</blockquote>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>html:
+</span></span><span style="display:flex;"><span>&lt;div&gt;
+</span></span><span style="display:flex;"><span>    &lt;div&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;javascript:void(0)&#34;</span>  @click<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gotoIdCon(&#39;#id-&#39;+index)&#34;</span> v-for<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index in 20&#34;</span>&gt; <span style="color:#f92672">{{</span>index<span style="color:#f92672">}}</span>&lt;/a&gt;&lt;/div&gt;
+</span></span><span style="display:flex;"><span>        &lt;div :id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#39;id-&#39;+index&#34;</span> class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span> v-for<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index in 20&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">{{</span>index<span style="color:#f92672">}}</span>&lt;span&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容&lt;/span&gt;
+</span></span><span style="display:flex;"><span>     &lt;/div&gt;
+</span></span><span style="display:flex;"><span>&lt;/div&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>js:
+</span></span><span style="display:flex;"><span>gotoIdCon<span style="color:#f92672">(</span>selector<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    var idSelector <span style="color:#f92672">=</span> this.$el.querySelector<span style="color:#f92672">(</span>selector<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    document.documentElement.scrollTop <span style="color:#f92672">=</span> idSelector.offsetTop
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>,
+</span></span></code></pre></div>
         </div>
 
         
@@ -170,7 +148,7 @@
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/git'>Git</a></li>
+                <li><a href='/tags/vue'>Vue</a></li>
                 
             </ul>
             
