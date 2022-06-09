@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HTML on miao blog</title>
-    <link>http://my.xyemy.com/tags/html.html</link>
-    <description>Recent content in HTML on miao blog</description>
+    <title>radio on miao blog</title>
+    <link>http://my.xyemy.com/tags/radio.html</link>
+    <description>Recent content in radio on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 09 Jan 2021 14:04:08 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Input验证</title>
-      <link>http://my.xyemy.com/post/2021/01/09/input%E9%AA%8C%E8%AF%81.html</link>
-      <pubDate>Sat, 09 Jan 2021 14:04:08 +0800</pubDate>
-      
-      <guid>http://my.xyemy.com/post/2021/01/09/input%E9%AA%8C%E8%AF%81.html</guid>
-      <description>input验证 只能输入正数，负数，小数 onkeyup=&amp;#34;value=value.replace(/[^\-?\d.]/g,&amp;#39;&amp;#39;)&amp;#34;</description>
-    </item>
-    
+    <lastBuildDate>Sat, 09 Jan 2021 13:20:12 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/radio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>radio操作</title>
       <link>http://my.xyemy.com/post/2021/01/09/radio.html</link>

@@ -44,12 +44,12 @@
     </item>
     
     <item>
-      <title>表单操作</title>
-      <link>http://my.xyemy.com/post/2021/01/09/%E8%A1%A8%E5%8D%95%E6%93%8D%E4%BD%9C.html</link>
+      <title>radio操作</title>
+      <link>http://my.xyemy.com/post/2021/01/09/radio.html</link>
       <pubDate>Sat, 09 Jan 2021 13:20:12 +0800</pubDate>
       
-      <guid>http://my.xyemy.com/post/2021/01/09/%E8%A1%A8%E5%8D%95%E6%93%8D%E4%BD%9C.html</guid>
-      <description>表单操作 radio操作 获取选中的值 $(&amp;#39;input[name=&amp;#34;testradio&amp;#34;]:checked&amp;#39;).val(); $(&amp;#39;input:radio:checked&amp;#39;).val(); $(&amp;#39;input[@name=&amp;#34;testradio&amp;#34;][checked]&amp;#39;);</description>
+      <guid>http://my.xyemy.com/post/2021/01/09/radio.html</guid>
+      <description>获取选中的值 $(&amp;#39;input[name=&amp;#34;testradio&amp;#34;]:checked&amp;#39;).val(); $(&amp;#39;input:radio:checked&amp;#39;).val(); $(&amp;#39;input[@name=&amp;#34;testradio&amp;#34;][checked]&amp;#39;); $(&amp;#39;input[name=&amp;#34;testradio&amp;#34;]&amp;#39;).filter(&amp;#39;:checked&amp;#39;); $(&amp;#39;#testradio input[name=&amp;#34;t&amp;#34;]:checked &amp;#39;).val(); 选中值为2的r</description>
     </item>
     
     <item>

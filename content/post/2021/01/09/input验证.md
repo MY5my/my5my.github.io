@@ -2,7 +2,7 @@
 title: "Input验证"
 date: 2021-01-09T14:04:08+08:00
 draft: false
-tags: ["HTML","表单"]
+tags: ["HTML","表单","input"]
 isCJKLanguage: true
 categories: ["HTML","表单"]
 ---

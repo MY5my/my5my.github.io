@@ -47,6 +47,9 @@
     <loc>http://my.xyemy.com/categories/html.html</loc>
     <lastmod>2021-01-09T14:04:08+08:00</lastmod>
   </url><url>
+    <loc>http://my.xyemy.com/tags/input.html</loc>
+    <lastmod>2021-01-09T14:04:08+08:00</lastmod>
+  </url><url>
     <loc>http://my.xyemy.com/post/2021/01/09/input%E9%AA%8C%E8%AF%81.html</loc>
     <lastmod>2021-01-09T14:04:08+08:00</lastmod>
   </url><url>
@@ -56,7 +59,10 @@
     <loc>http://my.xyemy.com/categories/%E8%A1%A8%E5%8D%95.html</loc>
     <lastmod>2021-01-09T14:04:08+08:00</lastmod>
   </url><url>
-    <loc>http://my.xyemy.com/post/2021/01/09/%E8%A1%A8%E5%8D%95%E6%93%8D%E4%BD%9C.html</loc>
+    <loc>http://my.xyemy.com/tags/radio.html</loc>
+    <lastmod>2021-01-09T13:20:12+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/post/2021/01/09/radio.html</loc>
     <lastmod>2021-01-09T13:20:12+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/post/2020/12/01/firstblog.html</loc>
