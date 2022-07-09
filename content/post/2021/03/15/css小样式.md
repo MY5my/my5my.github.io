@@ -1,9 +1,9 @@
 ---
 title: "Css小样式"
 date: 2021-03-015T10:52:31+08:00
-draft: true
+draft: false
 tags: ["样式"]
-isCJKLanguage: false
+isCJKLanguage: true
 categories: ["Css"]
 ---
 

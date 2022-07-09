@@ -9,21 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>input | miao blog</title>
-    <meta property="og:title" content="input - miao blog">
+    <title>Css小样式 | miao blog</title>
+    <meta property="og:title" content="Css小样式 - miao blog">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="">
-    <meta name="description" content="input">
+    <meta name="description" content="Css小样式">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/tags/input.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2021/03/15/css%E5%B0%8F%E6%A0%B7%E5%BC%8F.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="http://my.xyemy.com/tags/input/index.xml" title="miao blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -51,7 +50,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="http://my.xyemy.com/">首页</a>
+                    <a class="current" href="http://my.xyemy.com/">首页</a>
                     
                 </nav>
             </div>
@@ -67,46 +66,76 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        包含标签
-        <span class="keyword">input</span>
-        的文章
-    </h3>
-    
-
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="http://my.xyemy.com/post/2021/01/09/input%E9%AA%8C%E8%AF%81.html">Input验证</a>
-            </h1>
+            <h1 class="post-title">Css小样式</h1>
         </header>
         <date class="post-meta meta-date">
-            2021年1月9日
+            1年1月1日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='/categories/html'>HTML</a>
-            
-            <a href='/categories/%E8%A1%A8%E5%8D%95'>表单</a>
+            <span class="meta-category"><a href='/categories/css'>Css</a></span>
             
         </div>
         
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
         <div class="post-content">
-            input验证 只能输入正数，负数，小数 onkeyup=&#34;value=value.replace(/[^\-?\d.]/g,&#39;&#39;)&#34;……
-            <p class="readmore"><a href="http://my.xyemy.com/post/2021/01/09/input%E9%AA%8C%E8%AF%81.html">阅读全文</a></p>
+            <h1 id="禁止div点击">禁止div点击</h1>
+<h2 id="css属性">css属性：</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pointer-events: none;   
+</span></span></code></pre></div><blockquote>
+<p>或者定义属性，在js中添加：</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#34;.原类名&#34;</span><span style="color:#66d9ef">)</span>.addClass<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;新类名&#34;</span><span style="color:#f92672">)</span>;  
+</span></span></code></pre></div><h2 id="js">js</h2>
+<blockquote>
+<p>禁用</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$.fn.disable <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">$(</span>this<span style="color:#66d9ef">)</span>.addClass<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;disable&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>;
+</span></span><span style="display:flex;"><span>或者
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#34;#@id&#34;</span><span style="color:#66d9ef">)</span>.enable<span style="color:#f92672">()</span>;
+</span></span></code></pre></div><blockquote>
+<p>启用</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$.fn.enable <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">$(</span>this<span style="color:#66d9ef">)</span>.removeClass<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;disable&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#34;#@id&#34;</span><span style="color:#66d9ef">)</span>.disable<span style="color:#f92672">()</span>;
+</span></span></code></pre></div>
+        </div>
+
+        
+
+
+        
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/%E6%A0%B7%E5%BC%8F'>样式</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-
     
 
-
-
-
-
+    
+    
 </div>
 
                     <footer id="footer">
@@ -129,6 +158,16 @@
 </footer>
 
 
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
