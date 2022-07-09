@@ -6,7 +6,52 @@
     <description>Recent content in Js on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 12 Feb 2021 09:38:24 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 17:22:56 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数组取重</title>
+      <link>http://my.xyemy.com/post/2021/03/04/%E6%95%B0%E7%BB%84%E5%8F%96%E9%87%8D.html</link>
+      <pubDate>Thu, 04 Mar 2021 17:22:56 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/03/04/%E6%95%B0%E7%BB%84%E5%8F%96%E9%87%8D.html</guid>
+      <description>两个数组取出重复值 第一种 var arr=[{&amp;</description>
+    </item>
+    
+    <item>
+      <title>比较数组</title>
+      <link>http://my.xyemy.com/post/2021/03/04/%E6%AF%94%E8%BE%83%E6%95%B0%E7%BB%84.html</link>
+      <pubDate>Thu, 04 Mar 2021 17:20:56 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/03/04/%E6%AF%94%E8%BE%83%E6%95%B0%E7%BB%84.html</guid>
+      <description>比较两个数组是否相同 function includeArr (a, b) { if (!(a instanceof Array) ||</description>
+    </item>
+    
+    <item>
+      <title>数组去重</title>
+      <link>http://my.xyemy.com/post/2021/03/04/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D.html</link>
+      <pubDate>Thu, 04 Mar 2021 17:12:56 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/03/04/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D.html</guid>
+      <description>单个数组去重 function unique(arr) { var arr1 = []; for (var i = 0, len =</description>
+    </item>
+    
+    <item>
+      <title>获取数组中最大最小值</title>
+      <link>http://my.xyemy.com/post/2021/03/04/%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%80%BC.html</link>
+      <pubDate>Thu, 04 Mar 2021 17:05:01 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/03/04/%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%80%BC.html</guid>
+      <description>获取数组中最大最小值 平常 function smallest(array){ return Math.min.apply(Math, array); } function largest(array){</description>
+    </item>
+    
+    <item>
+      <title>判断数组</title>
+      <link>http://my.xyemy.com/post/2021/03/04/%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84.html</link>
+      <pubDate>Thu, 04 Mar 2021 11:13:12 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/03/04/%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84.html</guid>
+      <description>判断数组中是否存在某个值 第一种 indexOf let arr = [&amp;#39;react&amp;#39;,</description>
+    </item>
+    
     <item>
       <title>去除空格</title>
       <link>http://my.xyemy.com/post/2021/02/12/%E5%8E%BB%E9%99%A4%E7%A9%BA%E6%A0%BC.html</link>
