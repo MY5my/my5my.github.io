@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>li样式 on miao blog</title>
+    <link>http://my.xyemy.com/tags/li%E6%A0%B7%E5%BC%8F.html</link>
+    <description>Recent content in li样式 on miao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 09 Jul 2022 11:38:26 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/li%E6%A0%B7%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ul</title>
+      <link>http://my.xyemy.com/post/2021/03/15/ul.html</link>
+      <pubDate>Sat, 09 Jul 2022 11:38:26 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/03/15/ul.html</guid>
+      <description>##第一个li li:first-child { background:#f00; } ##最后一个li li:last-child</description>
+    </item>
+    
+  </channel>
+</rss>

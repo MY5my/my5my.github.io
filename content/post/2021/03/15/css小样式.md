@@ -1,10 +1,10 @@
 ---
-title: "Css小样式"
+title: "禁止div点击"
 date: 2021-03-15T10:52:31+08:00
 draft: false
-tags: ["样式"]
+tags: ["禁止div点击"]
 isCJKLanguage: true
-categories: ["Css"]
+categories: ["Css","Js"]
 ---
 
 # 禁止div点击
@@ -33,4 +33,42 @@ $.fn.enable = function () {
     $(this).removeClass("disable");
 };
 $("#@id").disable();
+```
+
+# 超出显示省略号
+>普通模式
+```shell script
+display:inline-block; 
+overflow:hidden; 
+white-space:nowrap; 
+text-overflow:ellipsis;
+```
+
+#英文单词换行
+```shell script
+word-break:break-all;
+word-wrap:break-word;
+```
+
+#两行截取  2行超出显示...
+```shell script
+display: -webkit-box;
+overflow: hidden;
+white-space: normal!important;
+text-overflow: ellipsis;
+word-wrap: break-word;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+```
+
+#select
+```shell script
+
+<select onmouseover="selbox($(this))" ></select>
+<script>
+function selbox(a){
+  var val = a.val();
+  a.attr("title",val);
+}
+</script>
 ```
