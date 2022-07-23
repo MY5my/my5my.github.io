@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Echarts on miao blog</title>
+    <link>http://my.xyemy.com/categories/echarts.html</link>
+    <description>Recent content in Echarts on miao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 23 Feb 2021 10:29:09 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/echarts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Echarts图标宽度自适应x轴文字自适应</title>
+      <link>http://my.xyemy.com/post/2021/02/23/echarts%E5%9B%BE%E6%A0%87%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94x%E8%BD%B4%E6%96%87%E5%AD%97%E8%87%AA%E9%80%82%E5%BA%94.html</link>
+      <pubDate>Tue, 23 Feb 2021 10:29:09 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/02/23/echarts%E5%9B%BE%E6%A0%87%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94x%E8%BD%B4%E6%96%87%E5%AD%97%E8%87%AA%E9%80%82%E5%BA%94.html</guid>
+      <description>柱状图为例 html &amp;lt;div class=&amp;#34;mainDiv&amp;#34;&amp;gt; &amp;lt;div id=&amp;#34;echartsDiv&amp;#34; style=&amp;#34;height: 450px&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; js xAxisData 为横坐标值</description>
+    </item>
+    
+  </channel>
+</rss>
