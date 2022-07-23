@@ -6,7 +6,16 @@
     <description>Recent content in Categories on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 09 Jul 2022 11:38:26 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jul 2022 13:46:44 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Js</title>
+      <link>http://my.xyemy.com/categories/js.html</link>
+      <pubDate>Sat, 23 Jul 2022 13:46:44 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/categories/js.html</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>css</title>
       <link>http://my.xyemy.com/categories/css.html</link>
@@ -40,15 +49,6 @@
       <pubDate>Mon, 22 Mar 2021 13:39:50 +0800</pubDate>
       
       <guid>http://my.xyemy.com/categories/layui.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Js</title>
-      <link>http://my.xyemy.com/categories/js.html</link>
-      <pubDate>Mon, 15 Mar 2021 10:52:31 +0800</pubDate>
-      
-      <guid>http://my.xyemy.com/categories/js.html</guid>
       <description></description>
     </item>
     
