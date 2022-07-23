@@ -9,24 +9,21 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Vue锚点 | miao blog</title>
-    <meta property="og:title" content="Vue锚点 - miao blog">
+    <title>时间 | miao blog</title>
+    <meta property="og:title" content="时间 - miao blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2022-06-09T14:06:01&#43;08:00'>
-        
-        
-    <meta property="article:modified_time" content='2022-06-09T14:06:01&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Vue锚点">
+    <meta name="description" content="时间">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/post/2022/06/09/vue%E9%94%9A%E7%82%B9.html">
+    <meta property="og:url" content="http://my.xyemy.com/tags/%E6%97%B6%E9%97%B4.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml" href="http://my.xyemy.com/tags/%E6%97%B6%E9%97%B4/index.xml" title="miao blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -54,7 +51,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="http://my.xyemy.com/">首页</a>
+                    <a class="" href="http://my.xyemy.com/">首页</a>
                     
                 </nav>
             </div>
@@ -70,95 +67,44 @@
                     
 <div class="res-cons">
     
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">时间</span>
+        的文章
+    </h3>
+    
+
+    
     <article class="post">
         <header>
-            <h1 class="post-title">Vue锚点</h1>
+            <h1 class="post-title">
+                <a href="http://my.xyemy.com/post/2021/03/22/layui%E5%BC%80%E5%A7%8B%E6%97%B6%E9%97%B4%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4.html">Layui开始时间结束时间判断（旧版本layui.js）</a>
+            </h1>
         </header>
         <date class="post-meta meta-date">
-            2022年6月9日
+            2021年3月22日
         </date>
         
-        <div class="post-meta">
-            <span>|</span>
+        <div class="post-meta meta-category">
+            |
             
-            <span class="meta-category"><a href='/categories/vue'>Vue</a></span>
+            <a href='/categories/layui'>layui</a>
             
         </div>
-        
-        
-        <div class="post-meta">
-            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                    阅读</span></span>
-        </div>
-        
         
         <div class="post-content">
-            <h2 id="页面可滚动时才有用">页面可滚动时才有用</h2>
-<blockquote>
-<p>最简单的办法</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>html：
-</span></span><span style="display:flex;"><span>&lt;div&gt;
-</span></span><span style="display:flex;"><span>    &lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;div id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Abstract&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>            AbstractAbstractAbstractAbstractAbstract
-</span></span><span style="display:flex;"><span>        &lt;/div&gt;
-</span></span><span style="display:flex;"><span>        &lt;div id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Cited&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>            CitedCitedCitedCitedCitedCited
-</span></span><span style="display:flex;"><span>        &lt;/div&gt;
-</span></span><span style="display:flex;"><span>    &lt;/div&gt;
-</span></span><span style="display:flex;"><span>    &lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;right&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;ul&gt;
-</span></span><span style="display:flex;"><span>            &lt;li  @click<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;returnTop(&#39;#Abstract&#39;)&#34;</span>&gt;&lt;/li&gt;    
-</span></span><span style="display:flex;"><span>            &lt;li  @click<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;returnTop(&#39;#Cited&#39;)&#34;</span>&gt;&lt;/li&gt;    
-</span></span><span style="display:flex;"><span>        &lt;/ul&gt;
-</span></span><span style="display:flex;"><span>    &lt;/div&gt;
-</span></span><span style="display:flex;"><span>&lt;/div&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>js:
-</span></span><span style="display:flex;"><span>returnTop<span style="color:#f92672">(</span>url<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>    document.getElementById<span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>.scrollIntoView<span style="color:#f92672">()</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><blockquote>
-<p>第二种</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>html:
-</span></span><span style="display:flex;"><span>&lt;div&gt;
-</span></span><span style="display:flex;"><span>    &lt;div&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;javascript:void(0)&#34;</span>  @click<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gotoIdCon(&#39;#id-&#39;+index)&#34;</span> v-for<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index in 20&#34;</span>&gt; <span style="color:#f92672">{{</span>index<span style="color:#f92672">}}</span>&lt;/a&gt;&lt;/div&gt;
-</span></span><span style="display:flex;"><span>        &lt;div :id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#39;id-&#39;+index&#34;</span> class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span> v-for<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index in 20&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">{{</span>index<span style="color:#f92672">}}</span>&lt;span&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容&lt;/span&gt;
-</span></span><span style="display:flex;"><span>     &lt;/div&gt;
-</span></span><span style="display:flex;"><span>&lt;/div&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>js:
-</span></span><span style="display:flex;"><span>gotoIdCon<span style="color:#f92672">(</span>selector<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    var idSelector <span style="color:#f92672">=</span> this.$el.querySelector<span style="color:#f92672">(</span>selector<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    document.documentElement.scrollTop <span style="color:#f92672">=</span> idSelector.offsetTop
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>,
-</span></span></code></pre></div>
-        </div>
-
-        
-
-
-        
-
-
-        <div class="post-meta meta-tags">
-            
-            <ul class="clearfix">
-                
-                <li><a href='/tags/%E9%94%9A%E7%82%B9%E5%AE%9A%E4%BD%8D'>锚点定位</a></li>
-                
-            </ul>
-            
+            html &lt;div class=&#34;layui-inline&#34;&gt; &lt;label class=&#34;layui……
+            <p class="readmore"><a href="http://my.xyemy.com/post/2021/03/22/layui%E5%BC%80%E5%A7%8B%E6%97%B6%E9%97%B4%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4.html">阅读全文</a></p>
         </div>
     </article>
     
-    
 
     
-    
+
+
+
+
+
 </div>
 
                     <footer id="footer">
@@ -181,16 +127,6 @@
 </footer>
 
 
-    
-    <script type="text/javascript">
-        window.MathJax = {
-            tex2jax: {
-                inlineMath: [['$', '$']],
-                processEscapes: true
-                }
-            };
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
