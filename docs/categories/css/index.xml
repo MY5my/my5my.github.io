@@ -13,7 +13,7 @@
       <pubDate>Sat, 09 Jul 2022 11:38:26 +0800</pubDate>
       
       <guid>http://my.xyemy.com/post/2021/03/15/ul.html</guid>
-      <description>##第一个li li:first-child { background:#f00; } ##最后一个li li:last-child</description>
+      <description>第一个li li:first-child { background:#f00; } 最后一个li li:last-child { background:#f00; } 第</description>
     </item>
     
     <item>
