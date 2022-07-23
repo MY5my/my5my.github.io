@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>url on miao blog</title>
+    <link>http://my.xyemy.com/tags/url.html</link>
+    <description>Recent content in url on miao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 21 Mar 2021 09:20:27 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/url/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>获取浏览器参数</title>
+      <link>http://my.xyemy.com/post/2021/03/21/%E8%8E%B7%E5%8F%96%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%82%E6%95%B0.html</link>
+      <pubDate>Sun, 21 Mar 2021 09:20:27 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/03/21/%E8%8E%B7%E5%8F%96%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%82%E6%95%B0.html</guid>
+      <description>获取浏览器链接中的参数 window.getLinkParam = function (param) { var url = window.location.href;</description>
+    </item>
+    
+  </channel>
+</rss>
