@@ -9,24 +9,21 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>radio操作 | miao blog</title>
-    <meta property="og:title" content="radio操作 - miao blog">
+    <title>vue | miao blog</title>
+    <meta property="og:title" content="vue - miao blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2021-01-09T13:20:12&#43;08:00'>
-        
-        
-    <meta property="article:modified_time" content='2021-01-09T13:20:12&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="radio操作">
+    <meta name="description" content="vue">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/post/2021/01/09/radio.html">
+    <meta property="og:url" content="http://my.xyemy.com/tags/vue.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml" href="http://my.xyemy.com/tags/vue/index.xml" title="miao blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -54,7 +51,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="http://my.xyemy.com/">首页</a>
+                    <a class="" href="http://my.xyemy.com/">首页</a>
                     
                 </nav>
             </div>
@@ -70,90 +67,44 @@
                     
 <div class="res-cons">
     
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">vue</span>
+        的文章
+    </h3>
+    
+
+    
     <article class="post">
         <header>
-            <h1 class="post-title">radio操作</h1>
+            <h1 class="post-title">
+                <a href="http://my.xyemy.com/post/2020/11/23/vue-cli%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE.html">Vue Cli搭建项目</a>
+            </h1>
         </header>
         <date class="post-meta meta-date">
-            2021年1月9日
+            2020年11月23日
         </date>
         
-        <div class="post-meta">
-            <span>|</span>
+        <div class="post-meta meta-category">
+            |
             
-            <span class="meta-category"><a href='/categories/html'>HTML</a></span>
-            
-            <span class="meta-category"><a href='/categories/%E8%A1%A8%E5%8D%95'>表单</a></span>
+            <a href='/categories/vue'>Vue</a>
             
         </div>
-        
-        
-        <div class="post-meta">
-            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                    阅读</span></span>
-        </div>
-        
         
         <div class="post-content">
-            <blockquote>
-<p>获取选中的值</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[name=&#34;testradio&#34;]:checked&#39;</span><span style="color:#66d9ef">)</span>.val<span style="color:#f92672">()</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input:radio:checked&#39;</span><span style="color:#66d9ef">)</span>.val<span style="color:#f92672">()</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[@name=&#34;testradio&#34;][checked]&#39;</span><span style="color:#66d9ef">)</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[name=&#34;testradio&#34;]&#39;</span><span style="color:#66d9ef">)</span>.filter<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:checked&#39;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;#testradio input[name=&#34;t&#34;]:checked &#39;</span><span style="color:#66d9ef">)</span>.val<span style="color:#f92672">()</span>;
-</span></span></code></pre></div><blockquote>
-<p>选中值为2的radio</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#34;input[name=&#39;radioName&#39;][value=2]&#34;</span><span style="color:#66d9ef">)</span>.attr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;checked&#34;</span>,true<span style="color:#f92672">)</span>; //选中值为2的radio
-</span></span></code></pre></div><blockquote>
-<p>取具体某个radio的值，比如第二个radio的值</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[name=&#34;testradio&#34;]:eq(1)&#39;</span><span style="color:#66d9ef">)</span>.val<span style="color:#f92672">()</span>
-</span></span></code></pre></div><blockquote>
-<p>js取消radio的选中</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>var checkedRadio<span style="color:#f92672">=</span>document.getElementsByName<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PublicationType&#34;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span>//radio的name为：PublicationType
-</span></span><span style="display:flex;"><span>$.each<span style="color:#f92672">(</span>checkedRadio, <span style="color:#66d9ef">function</span><span style="color:#f92672">(</span>i,v<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>    v.checked <span style="color:#f92672">=</span> false;
-</span></span><span style="display:flex;"><span>    v.removeAttribute<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;checked&#34;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">})</span>
-</span></span></code></pre></div><blockquote>
-<p>遍历</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;input[name=&#34;testradio&#34;]&#39;</span><span style="color:#66d9ef">)</span>.each<span style="color:#f92672">(</span><span style="color:#66d9ef">function</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    alert<span style="color:#f92672">(</span>this.value<span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">})</span>;
-</span></span></code></pre></div>
-        </div>
-
-        
-
-
-        
-
-
-        <div class="post-meta meta-tags">
-            
-            <ul class="clearfix">
-                
-                <li><a href='/tags/html'>HTML</a></li>
-                
-                <li><a href='/tags/%E8%A1%A8%E5%8D%95'>表单</a></li>
-                
-                <li><a href='/tags/radio'>radio</a></li>
-                
-            </ul>
-            
+            vue-cli 搭建项目 vue create &lt;项目名称&gt;……
+            <p class="readmore"><a href="http://my.xyemy.com/post/2020/11/23/vue-cli%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE.html">阅读全文</a></p>
         </div>
     </article>
     
-    
 
     
-    
+
+
+
+
+
 </div>
 
                     <footer id="footer">
@@ -176,16 +127,6 @@
 </footer>
 
 
-    
-    <script type="text/javascript">
-        window.MathJax = {
-            tex2jax: {
-                inlineMath: [['$', '$']],
-                processEscapes: true
-                }
-            };
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>

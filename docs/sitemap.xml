@@ -137,6 +137,12 @@
     <loc>http://my.xyemy.com/post/2020/12/01/firstblog.html</loc>
     <lastmod>2020-12-01T16:11:10+08:00</lastmod>
   </url><url>
+    <loc>http://my.xyemy.com/tags/vue.html</loc>
+    <lastmod>2020-11-23T13:36:03+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/post/2020/11/23/vue-cli%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE.html</loc>
+    <lastmod>2020-11-23T13:36:03+08:00</lastmod>
+  </url><url>
     <loc>http://my.xyemy.com/search.html</loc>
   </url>
 </urlset>

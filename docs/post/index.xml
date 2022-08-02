@@ -178,5 +178,14 @@
       <description>这是我小苗第一个博客</description>
     </item>
     
+    <item>
+      <title>Vue Cli搭建项目</title>
+      <link>http://my.xyemy.com/post/2020/11/23/vue-cli%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE.html</link>
+      <pubDate>Mon, 23 Nov 2020 13:36:03 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2020/11/23/vue-cli%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE.html</guid>
+      <description>vue-cli 搭建项目 vue create &amp;lt;项目名称&amp;gt;</description>
+    </item>
+    
   </channel>
 </rss>
