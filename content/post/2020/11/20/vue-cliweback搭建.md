@@ -40,6 +40,6 @@ cnpm install vue-cli -g
 
 >运行项目
 ![运行项目](/images/vue/E.jpg)
-
+![运行项目](/images/vue/F.jpg)
 >项目文件结构
 ![运行项目](/images/vue/vue2.0.jpg)
