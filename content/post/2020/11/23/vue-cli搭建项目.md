@@ -2,7 +2,7 @@
 title: "Vue Cli create搭建"
 date: 2020-11-23T13:36:03+08:00
 draft: false
-tags: ["vue"]
+tags: ["vuecli(c)"]
 isCJKLanguage: true
 categories: ["Vue"]
 ---

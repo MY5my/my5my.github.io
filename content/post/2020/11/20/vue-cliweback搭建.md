@@ -1,8 +1,8 @@
 ---
-title: "Vue Cli weback搭建"
+title: "Vue Cli webpack搭建"
 date: 2020-11-20T09:40:08+08:00
 draft: false
-tags: ["vue"]
+tags: ["vuecli(w)"]
 isCJKLanguage: true
 categories: ["Vue"]
 ---
