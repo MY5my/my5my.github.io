@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Vue在ie11下空白 | miao blog</title>
-    <meta property="og:title" content="Vue在ie11下空白 - miao blog">
+    <title>Vue引入全局scss文件 | miao blog</title>
+    <meta property="og:title" content="Vue引入全局scss文件 - miao blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-10-04T10:09:18&#43;08:00'>
+    <meta property="article:published_time" content='2020-12-20T16:35:36&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-10-04T10:09:18&#43;08:00'>
+    <meta property="article:modified_time" content='2020-12-20T16:35:36&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Vue在ie11下空白">
+    <meta name="description" content="Vue引入全局scss文件">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/post/2020/10/04/vue%E5%9C%A8ie11%E4%B8%8B%E7%A9%BA%E7%99%BD.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2020/12/20/vue%E5%BC%95%E5%85%A5%E5%85%A8%E5%B1%80scss%E6%96%87%E4%BB%B6.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -72,10 +72,10 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Vue在ie11下空白</h1>
+            <h1 class="post-title">Vue引入全局scss文件</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年10月4日
+            2020年12月20日
         </date>
         
         <div class="post-meta">
@@ -93,19 +93,83 @@
         
         
         <div class="post-content">
-            <h2 id="安装命令">安装命令</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>  npm install --save-dev babel-polyfill
-</span></span></code></pre></div><h2 id="在mianjs中引入">在mian.js中引入</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>  import <span style="color:#e6db74">&#39;babel-polyfill&#39;</span>;
-</span></span></code></pre></div><h2 id="在build文件夹中webpackbaseconfjs-替换内容">在build文件夹中webpack.base.conf.js 替换内容</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>   entry: <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>     app: ‘./src/main.js’
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>,
-</span></span></code></pre></div><p>替换为</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>   entry: <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      app: <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;babel-polyfill&#39;</span>, <span style="color:#e6db74">&#39;./src/main.js&#39;</span><span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>,
-</span></span></code></pre></div><p>即可</p>
+            <h2 id="安装命令如下">安装命令如下</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>npm install node-sass@4.14.1
+</span></span><span style="display:flex;"><span>npm install sass-loader@7.3.1 --save-dev
+</span></span></code></pre></div><blockquote>
+<p>&ndash;save 或者不写 会把信息记录到dependencies中
+dependencies 用户发布环境，是线上（生产环境下）所需要的依赖包，ependencies依赖的包不仅开发环境能使用，生产环境也能使用</p>
+</blockquote>
+<blockquote>
+<p>&ndash;save-dev 会把信息记录到 devDependencies  中
+devDependencies 用于本地环境开发时候所需要的依赖包，发布到线上时是不需要其下的文件，只用于开发环境，不用于生产环境，因此不需要打包</p>
+</blockquote>
+<p>
+        <a data-fancybox="gallery" href="/images/vue/node-sass_sass-loader.jpg">
+            <img class="mx-auto" alt="安装完成" src="/images/vue/node-sass_sass-loader.jpg" />
+        </a>
+    </p>
+<h3 id="更改build-下utilsjs文件">更改build 下utils.js文件</h3>
+<p>
+        <a data-fancybox="gallery" href="/images/vue/scss0.jpg">
+            <img class="mx-auto" alt="更改utils" src="/images/vue/scss0.jpg" />
+        </a>
+    
+更改内容如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span> scss: generateLoaders<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;sass&#39;</span><span style="color:#f92672">)</span>.concat<span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        loader: <span style="color:#e6db74">&#39;sass-resources-loader&#39;</span>,
+</span></span><span style="display:flex;"><span>        options: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>          //你自己的scss全局文件的路径
+</span></span><span style="display:flex;"><span>          resources: path.resolve<span style="color:#f92672">(</span>__dirname, <span style="color:#e6db74">&#39;../src/assets/css/public.scss&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">)</span>,
+</span></span></code></pre></div><h3 id="更改-build-webpackbaseconfjs文件">更改 build webpack.base.conf.js文件</h3>
+<p>
+        <a data-fancybox="gallery" href="/images/vue/scss01.jpg">
+            <img class="mx-auto" alt="更改webpack" src="/images/vue/scss01.jpg" />
+        </a>
+    
+更改内容如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    test: /<span style="color:#ae81ff">\.</span>scss$/,
+</span></span><span style="display:flex;"><span>    loaders: <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;style&#39;</span>, <span style="color:#e6db74">&#39;css&#39;</span>, <span style="color:#e6db74">&#39;sass&#39;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>html 文件下进行测试
+
+        <a data-fancybox="gallery" href="/images/vue/scss1.jpg">
+            <img class="mx-auto" alt="html" src="/images/vue/scss1.jpg" />
+        </a>
+    </p>
+</blockquote>
+<h2 id="注-langscss一定要加上-style-langscssstyle">注： lang=&ldquo;scss&quot;一定要加上 <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<blockquote>
+<p>public.scss 文件
+
+        <a data-fancybox="gallery" href="/images/vue/scss02.jpg">
+            <img class="mx-auto" alt="public.scss" src="/images/vue/scss02.jpg" />
+        </a>
+    </p>
+</blockquote>
+<ul>
+<li>@mixin 指令允许我们定义一个可以在整个样式表中重复使用的样式。</li>
+<li>@include 指令可以将混入（mixin）引入到文档中。</li>
+</ul>
+<blockquote>
+<p>其他scss文件想使用公共文件样式
+
+        <a data-fancybox="gallery" href="/images/vue/scss03.jpg">
+            <img class="mx-auto" alt="other" src="/images/vue/scss03.jpg" />
+        </a>
+    </p>
+</blockquote>
+<p>
+        <a data-fancybox="gallery" href="/images/vue/scss04.jpg">
+            <img class="mx-auto" alt="结束" src="/images/vue/scss04.jpg" />
+        </a>
+    </p>
 
         </div>
 
@@ -113,6 +177,15 @@
 
 
         
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/2020/12/04/vue%E5%9C%A8ie11%E4%B8%8B%E7%A9%BA%E7%99%BD.html">Vue在ie11下空白</a></li>
+        
+    </ul>
+</div>
 
 
         <div class="post-meta meta-tags">

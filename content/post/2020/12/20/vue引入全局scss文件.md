@@ -1,6 +1,6 @@
 ---
 title: "Vue引入全局scss文件"
-date: 2020-11-20T16:35:36+08:00
+date: 2020-12-20T16:35:36+08:00
 draft: false
 tags: ["vue"]
 isCJKLanguage: true

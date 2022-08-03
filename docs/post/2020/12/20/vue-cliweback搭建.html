@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Vue Cli create搭建 | miao blog</title>
-    <meta property="og:title" content="Vue Cli create搭建 - miao blog">
+    <title>Vue Cli webpack搭建 | miao blog</title>
+    <meta property="og:title" content="Vue Cli webpack搭建 - miao blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-11-23T13:36:03&#43;08:00'>
+    <meta property="article:published_time" content='2020-12-20T09:40:08&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-11-23T13:36:03&#43;08:00'>
+    <meta property="article:modified_time" content='2020-12-20T09:40:08&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Vue Cli create搭建">
+    <meta name="description" content="Vue Cli webpack搭建">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/post/2020/11/23/vue-cli%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2020/12/20/vue-cliweback%E6%90%AD%E5%BB%BA.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -72,10 +72,10 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Vue Cli create搭建</h1>
+            <h1 class="post-title">Vue Cli webpack搭建</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年11月23日
+            2020年12月20日
         </date>
         
         <div class="post-meta">
@@ -93,98 +93,77 @@
         
         
         <div class="post-content">
-            <h2 id="vue-createvue--cli3x-版本的初始方式-启动方式默认为-npm-run-serve">vue create：vue -cli3.x 版本的初始方式 ，启动方式默认为 npm run serve</h2>
+            <h2 id="前提全局安装webpack-全局安装vue-cli">前提：全局安装webpack 全局安装vue-cli</h2>
 <blockquote>
-<p>在终端输入以下命令 回车后自定义配置的话选择Manually select features: 自定义配置
+<p>安装webpack 我一般是用cnpm</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cnpm install webpack -g或者（cnpm install -g webpack）
+</span></span></code></pre></div><p>安装完成之后输入 webpack -v  出现版本号，成功
 
-        <a data-fancybox="gallery" href="/images/vue/1.jpg">
-            <img class="mx-auto" alt="第一步" src="/images/vue/1.jpg" />
+        <a data-fancybox="gallery" href="/images/vue/webpack1.jpg">
+            <img class="mx-auto" alt="查看webpack 版本号" src="/images/vue/webpack1.jpg" />
+        </a>
+    </p>
+<blockquote>
+<p>安装vue-cli 我一般是用cnpm</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cnpm install vue-cli -g
+</span></span></code></pre></div><p>安装完成之后输入 vue -V  V是大写  出现版本号，成功 
+
+        <a data-fancybox="gallery" href="/images/vue/vue-V.jpg">
+            <img class="mx-auto" alt="查看vue 版本号" src="/images/vue/vue-V.jpg" />
+        </a>
+    </p>
+<h2 id="vue-init-webpack-">vue init webpack :</h2>
+<h2 id="vue--cli2x-版本的初始化方式启动方式默认为-npm-run-dev-webpack-为官方推荐模板">vue -cli2.x 版本的初始化方式，启动方式默认为 npm run dev ，webpack 为官方推荐模板</h2>
+<blockquote>
+<p>在终端输入如下命令（项目名称不能是中文也不能用大写字母）,命令执行之后，会在当前目录生成一个以该名称命名的项目文件夹。
+
+        <a data-fancybox="gallery" href="/images/vue/A.jpg">
+            <img class="mx-auto" alt="第一步" src="/images/vue/A.jpg" />
         </a>
     </p>
 </blockquote>
 <blockquote>
-<p>回车后根据自己的需求添加配置项（上下是切换配置项，通过空格键选中配置项） 回车
+<p>选择配置项 回车
 
-        <a data-fancybox="gallery" href="/images/vue/2.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/2.jpg" />
+        <a data-fancybox="gallery" href="/images/vue/B.jpg">
+            <img class="mx-auto" alt="选择配置项" src="/images/vue/B.jpg" />
         </a>
     </p>
 </blockquote>
 <blockquote>
-<p>选择版本 2.x or 3.x 回车
+<p>等待安装 出现如图所示，安装成功
 
-        <a data-fancybox="gallery" href="/images/vue/3.jpg">
-            <img class="mx-auto" alt="选择版本" src="/images/vue/3.jpg" />
+        <a data-fancybox="gallery" href="/images/vue/C.jpg">
+            <img class="mx-auto" alt="安装成功" src="/images/vue/C.jpg" />
         </a>
     </p>
 </blockquote>
 <blockquote>
-<p>选择是否使用路由 history router，其实直白来说就是是否路径带 # 号，建议选择 N，否则服务器还要进行配置 回车</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Use history mode <span style="color:#66d9ef">for</span> router? <span style="color:#f92672">(</span>Requires proper server setup <span style="color:#66d9ef">for</span> index fallback in production<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>Y/n<span style="color:#f92672">)</span>
-</span></span></code></pre></div><blockquote>
-<p>css 的预处理器我选择的是 Sass/SCSS(with dart-sass) 。node-sass是自动编译实时的，dart-sass需要保存后才会生效 回车
+<p>进入项目目录 cd 项目名称
 
-        <a data-fancybox="gallery" href="/images/vue/4.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/4.jpg" />
+        <a data-fancybox="gallery" href="/images/vue/D.jpg">
+            <img class="mx-auto" alt="进入项目" src="/images/vue/D.jpg" />
         </a>
     </p>
 </blockquote>
 <blockquote>
-<p>选择ESLint的代码规范，此处我使用 Standard代码规范 回车
+<p>运行项目
 
-        <a data-fancybox="gallery" href="/images/vue/5.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/5.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>选择什么时候进行代码校验，Lint on save 保存就检查，Lint and fix on commit   fix 或者 commit 的时候检查，建议第一个 回车
-
-        <a data-fancybox="gallery" href="/images/vue/6.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/6.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>选择 Babel、PostCSS、ESLint配置文件存放位置，此处选择单独保存在各自的配置文件中 回车
-In dedicated config files 存放到独立文件中，In package.json 存放到 package.json 中
-
-        <a data-fancybox="gallery" href="/images/vue/7.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/7.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>最后就是是否保存本次的配置了，N 不记录，如果选择 Y 需要输入保存名字 回车</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Save this as a preset <span style="color:#66d9ef">for</span> future projects? <span style="color:#f92672">(</span>y/N<span style="color:#f92672">)</span> n
-</span></span></code></pre></div><blockquote>
-<p>等待创建项目
-
-        <a data-fancybox="gallery" href="/images/vue/8.jpg">
-            <img class="mx-auto" alt="等待创建" src="/images/vue/8.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>出现如图红框所示的提示，就搭建成功
-
-        <a data-fancybox="gallery" href="/images/vue/9.jpg">
-            <img class="mx-auto" alt="成功" src="/images/vue/9.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>进入项目目录，直接输入 npm run serve 就可以了
-
-        <a data-fancybox="gallery" href="/images/vue/10.jpg">
-            <img class="mx-auto" alt="运行项目" src="/images/vue/10.jpg" />
+        <a data-fancybox="gallery" href="/images/vue/E.jpg">
+            <img class="mx-auto" alt="运行项目" src="/images/vue/E.jpg" />
         </a>
     
 
-        <a data-fancybox="gallery" href="/images/vue/11.jpg">
-            <img class="mx-auto" alt="运行项目" src="/images/vue/11.jpg" />
+        <a data-fancybox="gallery" href="/images/vue/F.jpg">
+            <img class="mx-auto" alt="运行项目" src="/images/vue/F.jpg" />
+        </a>
+    
+项目文件结构
+
+        <a data-fancybox="gallery" href="/images/vue/vue2.0.jpg">
+            <img class="mx-auto" alt="运行项目" src="/images/vue/vue2.0.jpg" />
         </a>
     </p>
 </blockquote>
@@ -201,7 +180,7 @@ In dedicated config files 存放到独立文件中，In package.json 存放到 p
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/vueclic'>vuecli(c)</a></li>
+                <li><a href='/tags/vuecliw'>vuecli(w)</a></li>
                 
             </ul>
             
