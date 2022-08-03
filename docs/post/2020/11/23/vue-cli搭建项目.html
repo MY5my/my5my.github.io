@@ -93,12 +93,98 @@
         
         
         <div class="post-content">
-            <h2 id="vue-cli-搭建项目">vue-cli 搭建项目</h2>
+            <h2 id="vue-createvue--cli3x-版本的初始方式-启动方式默认为-npm-run-serve">vue create：vue -cli3.x 版本的初始方式 ，启动方式默认为 npm run serve</h2>
 <blockquote>
-<p>vue create &lt;项目名称&gt;
+<p>在终端输入以下命令 回车后自定义配置的话选择Manually select features: 自定义配置
 
         <a data-fancybox="gallery" href="/images/vue/1.jpg">
             <img class="mx-auto" alt="第一步" src="/images/vue/1.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>回车后根据自己的需求添加配置项（上下是切换配置项，通过空格键选中配置项） 回车
+
+        <a data-fancybox="gallery" href="/images/vue/2.jpg">
+            <img class="mx-auto" alt="选择配置" src="/images/vue/2.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>选择版本 2.x or 3.x 回车
+
+        <a data-fancybox="gallery" href="/images/vue/3.jpg">
+            <img class="mx-auto" alt="选择版本" src="/images/vue/3.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>选择是否使用路由 history router，其实直白来说就是是否路径带 # 号，建议选择 N，否则服务器还要进行配置 回车</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Use history mode <span style="color:#66d9ef">for</span> router? <span style="color:#f92672">(</span>Requires proper server setup <span style="color:#66d9ef">for</span> index fallback in production<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>Y/n<span style="color:#f92672">)</span>
+</span></span></code></pre></div><blockquote>
+<p>css 的预处理器我选择的是 Sass/SCSS(with dart-sass) 。node-sass是自动编译实时的，dart-sass需要保存后才会生效 回车
+
+        <a data-fancybox="gallery" href="/images/vue/4.jpg">
+            <img class="mx-auto" alt="选择配置" src="/images/vue/4.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>选择ESLint的代码规范，此处我使用 Standard代码规范 回车
+
+        <a data-fancybox="gallery" href="/images/vue/5.jpg">
+            <img class="mx-auto" alt="选择配置" src="/images/vue/5.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>选择什么时候进行代码校验，Lint on save 保存就检查，Lint and fix on commit   fix 或者 commit 的时候检查，建议第一个 回车
+
+        <a data-fancybox="gallery" href="/images/vue/6.jpg">
+            <img class="mx-auto" alt="选择配置" src="/images/vue/6.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>选择 Babel、PostCSS、ESLint配置文件存放位置，此处选择单独保存在各自的配置文件中 回车
+In dedicated config files 存放到独立文件中，In package.json 存放到 package.json 中
+
+        <a data-fancybox="gallery" href="/images/vue/7.jpg">
+            <img class="mx-auto" alt="选择配置" src="/images/vue/7.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>最后就是是否保存本次的配置了，N 不记录，如果选择 Y 需要输入保存名字 回车</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Save this as a preset <span style="color:#66d9ef">for</span> future projects? <span style="color:#f92672">(</span>y/N<span style="color:#f92672">)</span> n
+</span></span></code></pre></div><blockquote>
+<p>等待创建项目
+
+        <a data-fancybox="gallery" href="/images/vue/8.jpg">
+            <img class="mx-auto" alt="等待创建" src="/images/vue/8.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>出现如图红框所示的提示，就搭建成功
+
+        <a data-fancybox="gallery" href="/images/vue/9.jpg">
+            <img class="mx-auto" alt="成功" src="/images/vue/9.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>进入项目目录，直接输入 npm run serve 就可以了
+
+        <a data-fancybox="gallery" href="/images/vue/10.jpg">
+            <img class="mx-auto" alt="运行项目" src="/images/vue/10.jpg" />
+        </a>
+    
+
+        <a data-fancybox="gallery" href="/images/vue/11.jpg">
+            <img class="mx-auto" alt="运行项目" src="/images/vue/11.jpg" />
         </a>
     </p>
 </blockquote>
