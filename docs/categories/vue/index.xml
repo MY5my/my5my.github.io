@@ -52,5 +52,14 @@
       <description>安装命令 npm install --save-dev babel-polyfill 在mian.js中引入 import</description>
     </item>
     
+    <item>
+      <title>Vue解决axios在ie9下不发送请求</title>
+      <link>http://my.xyemy.com/post/2020/12/04/vueaxios%E5%9C%A8ie9%E4%B8%8B%E4%B8%8D%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82.html</link>
+      <pubDate>Thu, 03 Dec 2020 17:30:21 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2020/12/04/vueaxios%E5%9C%A8ie9%E4%B8%8B%E4%B8%8D%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82.html</guid>
+      <description>安装命令 npm install es6-promise --save-dev 安装成功后，在main.</description>
+    </item>
+    
   </channel>
 </rss>

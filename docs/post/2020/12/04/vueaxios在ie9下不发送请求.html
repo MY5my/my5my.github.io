@@ -9,21 +9,24 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>css | miao blog</title>
-    <meta property="og:title" content="css - miao blog">
+    <title>Vue解决axios在ie9下不发送请求 | miao blog</title>
+    <meta property="og:title" content="Vue解决axios在ie9下不发送请求 - miao blog">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2020-12-03T17:30:21&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-12-03T17:30:21&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="css">
+    <meta name="description" content="Vue解决axios在ie9下不发送请求">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/categories/css.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2020/12/04/vueaxios%E5%9C%A8ie9%E4%B8%8B%E4%B8%8D%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="http://my.xyemy.com/categories/css/index.xml" title="miao blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -51,7 +54,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="http://my.xyemy.com/">首页</a>
+                    <a class="current" href="http://my.xyemy.com/">首页</a>
                     
                 </nav>
             </div>
@@ -67,69 +70,58 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        分类
-        <span class="keyword">css</span>
-        中的文章
-    </h3>
-    
-
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="http://my.xyemy.com/post/2021/03/15/ul.html">Ul</a>
-            </h1>
+            <h1 class="post-title">Vue解决axios在ie9下不发送请求</h1>
         </header>
         <date class="post-meta meta-date">
-            2022年7月9日
+            2020年12月3日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='/categories/css'>css</a>
+            <span class="meta-category"><a href='/categories/vue'>Vue</a></span>
             
         </div>
         
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
         <div class="post-content">
-            第一个li li:first-child { background:#f00; } 最后一个li li:last-child { background:#f00; } 第……
-            <p class="readmore"><a href="http://my.xyemy.com/post/2021/03/15/ul.html">阅读全文</a></p>
+            <h2 id="安装命令">安装命令</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>  npm install es6-promise --save-dev
+</span></span></code></pre></div><h2 id="安装成功后在mainjs">安装成功后，在main.js</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import promise from <span style="color:#e6db74">&#39;es6-promise&#39;</span>
+</span></span><span style="display:flex;"><span>promise.polyfill<span style="color:#f92672">()</span>
+</span></span></code></pre></div>
+        </div>
+
+        
+
+
+        
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/vueaxios'>vueaxios</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://my.xyemy.com/post/2021/03/15/%E7%A6%81%E6%AD%A2div%E7%82%B9%E5%87%BB.html">禁止div点击</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2021年3月15日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='/categories/css'>Css</a>
-            
-            <a href='/categories/js'>Js</a>
-            
-        </div>
-        
-        <div class="post-content">
-            禁止div点击 css属性： pointer-events: none; 或者定义属……
-            <p class="readmore"><a href="http://my.xyemy.com/post/2021/03/15/%E7%A6%81%E6%AD%A2div%E7%82%B9%E5%87%BB.html">阅读全文</a></p>
-        </div>
-    </article>
     
 
     
-
-
-
-
-
+    
 </div>
 
                     <footer id="footer">
@@ -152,6 +144,16 @@
 </footer>
 
 
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
