@@ -188,6 +188,15 @@
     </item>
     
     <item>
+      <title>Vue Cliweback搭建</title>
+      <link>http://my.xyemy.com/post/2020/11/20/vue-cliweback%E6%90%AD%E5%BB%BA.html</link>
+      <pubDate>Fri, 20 Nov 2020 09:40:08 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2020/11/20/vue-cliweback%E6%90%AD%E5%BB%BA.html</guid>
+      <description>前提：全局安装webpack 全局安装vu</description>
+    </item>
+    
+    <item>
       <title>搜索</title>
       <link>http://my.xyemy.com/search.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

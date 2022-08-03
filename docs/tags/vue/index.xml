@@ -16,5 +16,14 @@
       <description>vue create：vue -cli3.x 版本的初始方式 ，</description>
     </item>
     
+    <item>
+      <title>Vue Cliweback搭建</title>
+      <link>http://my.xyemy.com/post/2020/11/20/vue-cliweback%E6%90%AD%E5%BB%BA.html</link>
+      <pubDate>Fri, 20 Nov 2020 09:40:08 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2020/11/20/vue-cliweback%E6%90%AD%E5%BB%BA.html</guid>
+      <description>前提：全局安装webpack 全局安装vu</description>
+    </item>
+    
   </channel>
 </rss>

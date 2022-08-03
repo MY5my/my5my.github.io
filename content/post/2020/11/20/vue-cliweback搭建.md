@@ -1,7 +1,7 @@
 ---
 title: "Vue Cliweback搭建"
 date: 2020-11-20T09:40:08+08:00
-draft: true
+draft: false
 tags: ["vue"]
 isCJKLanguage: true
 categories: ["Vue"]

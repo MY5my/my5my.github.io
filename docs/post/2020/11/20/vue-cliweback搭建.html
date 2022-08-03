@@ -9,21 +9,24 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Vue | miao blog</title>
-    <meta property="og:title" content="Vue - miao blog">
+    <title>Vue Cliweback搭建 | miao blog</title>
+    <meta property="og:title" content="Vue Cliweback搭建 - miao blog">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2020-11-20T09:40:08&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-11-20T09:40:08&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Vue">
+    <meta name="description" content="Vue Cliweback搭建">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/categories/vue.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2020/11/20/vue-cliweback%E6%90%AD%E5%BB%BA.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="http://my.xyemy.com/categories/vue/index.xml" title="miao blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -51,7 +54,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="http://my.xyemy.com/">首页</a>
+                    <a class="current" href="http://my.xyemy.com/">首页</a>
                     
                 </nav>
             </div>
@@ -67,90 +70,124 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        分类
-        <span class="keyword">Vue</span>
-        中的文章
-    </h3>
-    
-
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="http://my.xyemy.com/post/2022/06/09/vue%E9%94%9A%E7%82%B9.html">Vue锚点</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2022年6月9日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='/categories/vue'>Vue</a>
-            
-        </div>
-        
-        <div class="post-content">
-            页面可滚动时才有用 最简单的办法 html：……
-            <p class="readmore"><a href="http://my.xyemy.com/post/2022/06/09/vue%E9%94%9A%E7%82%B9.html">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://my.xyemy.com/post/2020/11/23/vue-cli%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE.html">Vue Cli create搭建</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年11月23日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='/categories/vue'>Vue</a>
-            
-        </div>
-        
-        <div class="post-content">
-            vue create：vue -cli3.x 版本的初始方式 ，……
-            <p class="readmore"><a href="http://my.xyemy.com/post/2020/11/23/vue-cli%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE.html">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://my.xyemy.com/post/2020/11/20/vue-cliweback%E6%90%AD%E5%BB%BA.html">Vue Cliweback搭建</a>
-            </h1>
+            <h1 class="post-title">Vue Cliweback搭建</h1>
         </header>
         <date class="post-meta meta-date">
             2020年11月20日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='/categories/vue'>Vue</a>
+            <span class="meta-category"><a href='/categories/vue'>Vue</a></span>
             
         </div>
         
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
         <div class="post-content">
-            前提：全局安装webpack 全局安装vu……
-            <p class="readmore"><a href="http://my.xyemy.com/post/2020/11/20/vue-cliweback%E6%90%AD%E5%BB%BA.html">阅读全文</a></p>
+            <h2 id="前提全局安装webpack-全局安装vue-cli">前提：全局安装webpack 全局安装vue-cli</h2>
+<blockquote>
+<p>安装webpack 我一般是用cnpm</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cnpm install webpack -g或者（cnpm install -g webpack）
+</span></span></code></pre></div><p>安装完成之后输入 webpack -v  出现版本号，成功
+
+        <a data-fancybox="gallery" href="/images/vue/webpack1.jpg">
+            <img class="mx-auto" alt="查看webpack 版本号" src="/images/vue/webpack1.jpg" />
+        </a>
+    </p>
+<blockquote>
+<p>安装vue-cli 我一般是用cnpm</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cnpm install vue-cli -g
+</span></span></code></pre></div><p>安装完成之后输入 vue -V  V是大写  出现版本号，成功 
+
+        <a data-fancybox="gallery" href="/images/vue/vue-V.jpg">
+            <img class="mx-auto" alt="查看vue 版本号" src="/images/vue/vue-V.jpg" />
+        </a>
+    </p>
+<h2 id="vue-init-webpack-">vue init webpack :</h2>
+<h2 id="vue--cli2x-版本的初始化方式启动方式默认为-npm-run-dev-webpack-为官方推荐模板">vue -cli2.x 版本的初始化方式，启动方式默认为 npm run dev ，webpack 为官方推荐模板</h2>
+<blockquote>
+<p>在终端输入如下命令（项目名称不能是中文也不能用大写字母）,命令执行之后，会在当前目录生成一个以该名称命名的项目文件夹。
+
+        <a data-fancybox="gallery" href="/images/vue/A.jpg">
+            <img class="mx-auto" alt="第一步" src="/images/vue/A.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>选择配置项 回车
+
+        <a data-fancybox="gallery" href="/images/vue/B.jpg">
+            <img class="mx-auto" alt="选择配置项" src="/images/vue/B.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>等待安装 出现如图所示，安装成功
+
+        <a data-fancybox="gallery" href="/images/vue/C.jpg">
+            <img class="mx-auto" alt="安装成功" src="/images/vue/C.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>进入项目目录 cd 项目名称
+
+        <a data-fancybox="gallery" href="/images/vue/D.jpg">
+            <img class="mx-auto" alt="进入项目" src="/images/vue/D.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>运行项目
+
+        <a data-fancybox="gallery" href="/images/vue/E.jpg">
+            <img class="mx-auto" alt="运行项目" src="/images/vue/E.jpg" />
+        </a>
+    </p>
+</blockquote>
+<blockquote>
+<p>项目文件结构
+
+        <a data-fancybox="gallery" href="/images/vue/vue2.0.jpg">
+            <img class="mx-auto" alt="运行项目" src="/images/vue/vue2.0.jpg" />
+        </a>
+    </p>
+</blockquote>
+
+        </div>
+
+        
+
+
+        
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/vue'>vue</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-
     
 
-
-
-
-
+    
+    
 </div>
 
                     <footer id="footer">
@@ -173,6 +210,16 @@
 </footer>
 
 
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
