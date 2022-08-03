@@ -205,5 +205,14 @@
       <description>前提：全局安装webpack 全局安装vu</description>
     </item>
     
+    <item>
+      <title>Vue在ie11下空白</title>
+      <link>http://my.xyemy.com/post/2020/10/04/vue%E5%9C%A8ie11%E4%B8%8B%E7%A9%BA%E7%99%BD.html</link>
+      <pubDate>Sun, 04 Oct 2020 10:09:18 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2020/10/04/vue%E5%9C%A8ie11%E4%B8%8B%E7%A9%BA%E7%99%BD.html</guid>
+      <description>安装命令 npm install --save-dev babel-polyfill 在mian.js中引入 import</description>
+    </item>
+    
   </channel>
 </rss>
