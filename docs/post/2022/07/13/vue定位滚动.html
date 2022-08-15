@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>Vue定位滚动 | miao blog</title>
+    <meta property="og:title" content="Vue定位滚动 - miao blog">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2022-07-13T10:12:27&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2022-07-13T10:12:27&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="Vue定位滚动">
+        
+    <meta name="author" content="enenen">
+    <meta property="og:url" content="http://my.xyemy.com/post/2022/07/13/vue%E5%AE%9A%E4%BD%8D%E6%BB%9A%E5%8A%A8.html">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+        <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://my.xyemy.com/">
+                        miao blog
+                    </a>
+                
+                <p class="description">要做一个爱笑的小仙女</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://my.xyemy.com/">首页</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">Vue定位滚动</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年7月13日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/vue'>Vue</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <h2 id="适用于vue2x和vue3x版本">适用于vue2.x和vue3.x版本</h2>
+<blockquote>
+<p>安装插件</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>npm install --save vue-scrollto
+</span></span></code></pre></div><blockquote>
+<p>在main中引入并使用</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>var VueScrollTo <span style="color:#f92672">=</span> require<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;vue-scrollto&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>Vue.use<span style="color:#f92672">(</span>VueScrollTo<span style="color:#f92672">)</span>
+</span></span></code></pre></div><blockquote>
+<p>在页面使用 
+如下图所示
+
+        <a data-fancybox="gallery" href="/images/vue/scroll1.jpg">
+            <img class="mx-auto" alt="代码1" src="/images/vue/scroll1.jpg" />
+        </a>
+    </p>
+</blockquote>
+<h2 id="点击按钮上加上">点击按钮上加上</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>v-scroll-to<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#39;#setDiv&#39;&#34;</span>
+</span></span></code></pre></div><p>
+        <a data-fancybox="gallery" href="/images/vue/scroll2.jpg">
+            <img class="mx-auto" alt="代码2" src="/images/vue/scroll2.jpg" />
+        </a>
+    </p>
+<h2 id="在需要跳转的地方加上">在需要跳转的地方加上</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;setDiv&#34;</span>
+</span></span></code></pre></div>
+        </div>
+
+        
+
+
+        
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/srcollto'>srcollto</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2022 <a href="http://my.xyemy.com/">miao blog By enenen</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+           
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://my.xyemy.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://my.xyemy.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html" title="VueAxios封装">VueAxios封装</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/03/21/%E5%AF%BC%E5%87%BA%E6%B5%81%E6%96%87%E4%BB%B6.html" title="导出流文件">导出流文件</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2022/07/13/vue%E5%AE%9A%E4%BD%8D%E6%BB%9A%E5%8A%A8.html" title="Vue定位滚动">Vue定位滚动</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/03/15/ul.html" title="Ul">Ul</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2022/06/09/vue%E9%94%9A%E7%82%B9.html" title="Vue锚点">Vue锚点</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2022/06/03/git.html" title="Git 撤回commit以及回退版本">Git 撤回commit以及回退版本</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/03/22/layui%E5%BC%80%E5%A7%8B%E6%97%B6%E9%97%B4%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4.html" title="Layui开始时间结束时间判断（旧版本layui.js）">Layui开始时间结束时间判断（旧版本layui.js）</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/03/21/%E8%8E%B7%E5%8F%96%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%82%E6%95%B0.html" title="获取浏览器参数">获取浏览器参数</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/03/15/%E7%A6%81%E6%AD%A2div%E7%82%B9%E5%87%BB.html" title="禁止div点击">禁止div点击</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/03/04/%E6%95%B0%E7%BB%84%E5%8F%96%E9%87%8D.html" title="数组取重">数组取重</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="http://my.xyemy.com/categories/css.html">css (2)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/echarts.html">Echarts (1)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/git.html">Git (1)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/html.html">HTML (4)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/js.html">Js (9)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/layui.html">layui (1)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/vue.html">Vue (8)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/%E8%A1%A8%E5%8D%95.html">表单 (4)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="http://my.xyemy.com/tags/checkbox.html">checkbox</a>
+    
+    <a href="http://my.xyemy.com/tags/git.html">Git</a>
+    
+    <a href="http://my.xyemy.com/tags/html.html">HTML</a>
+    
+    <a href="http://my.xyemy.com/tags/input.html">input</a>
+    
+    <a href="http://my.xyemy.com/tags/li%E6%A0%B7%E5%BC%8F.html">li样式</a>
+    
+    <a href="http://my.xyemy.com/tags/radio.html">radio</a>
+    
+    <a href="http://my.xyemy.com/tags/select.html">select</a>
+    
+    <a href="http://my.xyemy.com/tags/srcollto.html">srcollto</a>
+    
+    <a href="http://my.xyemy.com/tags/url.html">url</a>
+    
+    <a href="http://my.xyemy.com/tags/vue.html">vue</a>
+    
+    <a href="http://my.xyemy.com/tags/vueaxios.html">vueaxios</a>
+    
+    <a href="http://my.xyemy.com/tags/vueclic.html">vuecli(c)</a>
+    
+    <a href="http://my.xyemy.com/tags/vuecliw.html">vuecli(w)</a>
+    
+    <a href="http://my.xyemy.com/tags/%E6%95%B0%E7%BB%84.html">数组</a>
+    
+    <a href="http://my.xyemy.com/tags/%E6%97%B6%E9%97%B4.html">时间</a>
+    
+    <a href="http://my.xyemy.com/tags/%E7%A6%81%E6%AD%A2div%E7%82%B9%E5%87%BB.html">禁止div点击</a>
+    
+    <a href="http://my.xyemy.com/tags/%E7%A9%BA%E6%A0%BC.html">空格</a>
+    
+    <a href="http://my.xyemy.com/tags/%E8%A1%A8%E5%8D%95.html">表单</a>
+    
+    <a href="http://my.xyemy.com/tags/%E9%94%9A%E7%82%B9%E5%AE%9A%E4%BD%8D.html">锚点定位</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://my.xyemy.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

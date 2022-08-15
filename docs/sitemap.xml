@@ -3,19 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://my.xyemy.com/categories.html</loc>
-    <lastmod>2022-07-23T13:46:44+08:00</lastmod>
+    <lastmod>2022-08-04T10:04:37+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/</loc>
+    <lastmod>2022-08-04T10:04:37+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/post.html</loc>
+    <lastmod>2022-08-04T10:04:37+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/categories/vue.html</loc>
+    <lastmod>2022-08-04T10:04:37+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html</loc>
+    <lastmod>2022-08-04T10:04:37+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/categories/js.html</loc>
     <lastmod>2022-07-23T13:46:44+08:00</lastmod>
   </url><url>
-    <loc>http://my.xyemy.com/</loc>
-    <lastmod>2022-07-23T13:46:44+08:00</lastmod>
-  </url><url>
-    <loc>http://my.xyemy.com/post.html</loc>
-    <lastmod>2022-07-23T13:46:44+08:00</lastmod>
-  </url><url>
     <loc>http://my.xyemy.com/post/2021/03/21/%E5%AF%BC%E5%87%BA%E6%B5%81%E6%96%87%E4%BB%B6.html</loc>
     <lastmod>2022-07-23T13:46:44+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/tags/srcollto.html</loc>
+    <lastmod>2022-07-13T10:12:27+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/tags.html</loc>
+    <lastmod>2022-07-13T10:12:27+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/post/2022/07/13/vue%E5%AE%9A%E4%BD%8D%E6%BB%9A%E5%8A%A8.html</loc>
+    <lastmod>2022-07-13T10:12:27+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/categories/css.html</loc>
     <lastmod>2022-07-09T11:38:26+08:00</lastmod>
@@ -23,14 +38,8 @@
     <loc>http://my.xyemy.com/tags/li%E6%A0%B7%E5%BC%8F.html</loc>
     <lastmod>2022-07-09T11:38:26+08:00</lastmod>
   </url><url>
-    <loc>http://my.xyemy.com/tags.html</loc>
-    <lastmod>2022-07-09T11:38:26+08:00</lastmod>
-  </url><url>
     <loc>http://my.xyemy.com/post/2021/03/15/ul.html</loc>
     <lastmod>2022-07-09T11:38:26+08:00</lastmod>
-  </url><url>
-    <loc>http://my.xyemy.com/categories/vue.html</loc>
-    <lastmod>2022-06-09T14:06:01+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/post/2022/06/09/vue%E9%94%9A%E7%82%B9.html</loc>
     <lastmod>2022-06-09T14:06:01+08:00</lastmod>

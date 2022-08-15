@@ -6,7 +6,25 @@
     <description>Recent content in Vue on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 09 Jun 2022 14:06:01 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Aug 2022 10:04:37 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VueAxios封装</title>
+      <link>http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html</link>
+      <pubDate>Thu, 04 Aug 2022 10:04:37 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html</guid>
+      <description>在main.js里import websocket from &amp;#3</description>
+    </item>
+    
+    <item>
+      <title>Vue定位滚动</title>
+      <link>http://my.xyemy.com/post/2022/07/13/vue%E5%AE%9A%E4%BD%8D%E6%BB%9A%E5%8A%A8.html</link>
+      <pubDate>Wed, 13 Jul 2022 10:12:27 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2022/07/13/vue%E5%AE%9A%E4%BD%8D%E6%BB%9A%E5%8A%A8.html</guid>
+      <description>适用于vue2.x和vue3.x版本 安装</description>
+    </item>
+    
     <item>
       <title>Vue锚点</title>
       <link>http://my.xyemy.com/post/2022/06/09/vue%E9%94%9A%E7%82%B9.html</link>
