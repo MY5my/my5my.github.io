@@ -57,3 +57,51 @@ gotoIdCon(selector) {
 },
 
 ```
+
+
+## A页面点击按钮  跳转B页面指定位置
+A页面
+```shell script
+<el-button type="primary"  @click="goToFun('assessmentPage','setDiv')">页面跳转</el-button>
+    path:路径
+    id:跳转到的id
+    goToFun(path,id){
+        var path=path
+        var Id=id;
+        localStorage.setItem('toId',Id);
+        this.$router.push(path);
+    }
+```
+
+B页面
+```shell script
+<div id="setDiv">要跳转到的div 加上id 与A页面的id传值一样</div>
+created(){
+ this.$nextTick(() => {
+    this.toLocal()
+  })
+},
+mounted(){
+    //跳转设置模块div
+    let _this = this;
+    _this.$nextTick(function () {
+    window.addEventListener('scroll', _this.handleScroll)
+    })
+},
+//用完后记得将存储的锚点置空，否则会影响其他页面跳转到当前页面
+destroyed() {
+  localStorage.setItem('toId', '');
+},
+methods:{
+    //锚点跳转
+    toLocal() {
+        //查找存储的锚点id
+        let Id = localStorage.getItem('toId');
+        let toElement = document.getElementById(Id);
+        //锚点存在跳转
+        if (Id) {
+          toElement.scrollIntoView()
+        }
+    },
+}
+```

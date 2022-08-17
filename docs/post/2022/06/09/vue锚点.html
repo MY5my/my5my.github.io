@@ -135,6 +135,47 @@
 </span></span><span style="display:flex;"><span>    var idSelector <span style="color:#f92672">=</span> this.$el.querySelector<span style="color:#f92672">(</span>selector<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>    document.documentElement.scrollTop <span style="color:#f92672">=</span> idSelector.offsetTop
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>,
+</span></span></code></pre></div><h2 id="a页面点击按钮--跳转b页面指定位置">A页面点击按钮  跳转B页面指定位置</h2>
+<p>A页面</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;el-button type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;primary&#34;</span>  @click<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;goToFun(&#39;assessmentPage&#39;,&#39;setDiv&#39;)&#34;</span>&gt;页面跳转&lt;/el-button&gt;
+</span></span><span style="display:flex;"><span>    path:路径
+</span></span><span style="display:flex;"><span>    id:跳转到的id
+</span></span><span style="display:flex;"><span>    goToFun<span style="color:#f92672">(</span>path,id<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>        var path<span style="color:#f92672">=</span>path
+</span></span><span style="display:flex;"><span>        var Id<span style="color:#f92672">=</span>id;
+</span></span><span style="display:flex;"><span>        localStorage.setItem<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;toId&#39;</span>,Id<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>        this.$router.push<span style="color:#f92672">(</span>path<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>B页面</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;div id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;setDiv&#34;</span>&gt;要跳转到的div 加上id 与A页面的id传值一样&lt;/div&gt;
+</span></span><span style="display:flex;"><span>created<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span> this.$nextTick<span style="color:#f92672">(()</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    this.toLocal<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">})</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>mounted<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>    //跳转设置模块div
+</span></span><span style="display:flex;"><span>    let _this <span style="color:#f92672">=</span> this;
+</span></span><span style="display:flex;"><span>    _this.$nextTick<span style="color:#f92672">(</span><span style="color:#66d9ef">function</span> <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    window.addEventListener<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;scroll&#39;</span>, _this.handleScroll<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">})</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>//用完后记得将存储的锚点置空，否则会影响其他页面跳转到当前页面
+</span></span><span style="display:flex;"><span>destroyed<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  localStorage.setItem<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;toId&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>methods:<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    //锚点跳转
+</span></span><span style="display:flex;"><span>    toLocal<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        //查找存储的锚点id
+</span></span><span style="display:flex;"><span>        let Id <span style="color:#f92672">=</span> localStorage.getItem<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;toId&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>        let toElement <span style="color:#f92672">=</span> document.getElementById<span style="color:#f92672">(</span>Id<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>        //锚点存在跳转
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>Id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>          toElement.scrollIntoView<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div>
         </div>
 
