@@ -89,12 +89,12 @@
     </item>
     
     <item>
-      <title>数组取重</title>
+      <title>两个数组操作</title>
       <link>http://my.xyemy.com/post/2021/03/04/%E6%95%B0%E7%BB%84%E5%8F%96%E9%87%8D.html</link>
       <pubDate>Thu, 04 Mar 2021 17:22:56 +0800</pubDate>
       
       <guid>http://my.xyemy.com/post/2021/03/04/%E6%95%B0%E7%BB%84%E5%8F%96%E9%87%8D.html</guid>
-      <description>两个数组取出重复值 第一种 var arr=[{&amp;</description>
+      <description>两个数组取出不重复值 第一种 var arr=[{</description>
     </item>
     
     <item>
