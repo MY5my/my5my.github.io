@@ -6,7 +6,16 @@
     <description>Recent content in Vue on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 04 Aug 2022 10:04:37 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 11:03:43 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue项目兼容ie浏览器调整</title>
+      <link>http://my.xyemy.com/post/2022/10/26/vue%E9%A1%B9%E7%9B%AE%E5%85%BC%E5%AE%B9ie%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E6%95%B4.html</link>
+      <pubDate>Wed, 26 Oct 2022 11:03:43 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2022/10/26/vue%E9%A1%B9%E7%9B%AE%E5%85%BC%E5%AE%B9ie%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E6%95%B4.html</guid>
+      <description>vue</description>
+    </item>
+    
     <item>
       <title>VueAxios封装</title>
       <link>http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html</link>
@@ -32,15 +41,6 @@
       
       <guid>http://my.xyemy.com/post/2022/06/09/vue%E5%AE%9A%E4%BD%8D%E6%BB%9A%E5%8A%A8.html</guid>
       <description>适用于vue2.x和vue3.x版本 安装</description>
-    </item>
-    
-    <item>
-      <title>Vue在Ie浏览器兼容问题汇总调整</title>
-      <link>http://my.xyemy.com/post/2021/06/1/vue%E5%9C%A8ie%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%B0%83%E6%95%B4.html</link>
-      <pubDate>Tue, 01 Jun 2021 12:22:39 +0800</pubDate>
-      
-      <guid>http://my.xyemy.com/post/2021/06/1/vue%E5%9C%A8ie%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%B0%83%E6%95%B4.html</guid>
-      <description></description>
     </item>
     
     <item>
