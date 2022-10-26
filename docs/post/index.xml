@@ -71,6 +71,24 @@
     </item>
     
     <item>
+      <title>动态给Js增加版本号</title>
+      <link>http://my.xyemy.com/post/2021/12/23/%E5%8A%A8%E6%80%81%E7%BB%99js%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E5%8F%B7.html</link>
+      <pubDate>Thu, 23 Dec 2021 10:50:40 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/12/23/%E5%8A%A8%E6%80%81%E7%BB%99js%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E5%8F%B7.html</guid>
+      <description>动态给js增加版本号 否则上传导致页面缓存</description>
+    </item>
+    
+    <item>
+      <title>Vue在Ie浏览器兼容问题汇总调整</title>
+      <link>http://my.xyemy.com/post/2021/06/1/vue%E5%9C%A8ie%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%B0%83%E6%95%B4.html</link>
+      <pubDate>Tue, 01 Jun 2021 12:22:39 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/06/1/vue%E5%9C%A8ie%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%B0%83%E6%95%B4.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Layui开始时间结束时间判断（旧版本layui.js）</title>
       <link>http://my.xyemy.com/post/2021/03/22/layui%E5%BC%80%E5%A7%8B%E6%97%B6%E9%97%B4%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4.html</link>
       <pubDate>Mon, 22 Mar 2021 13:39:50 +0800</pubDate>

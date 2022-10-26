@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IE兼容 on miao blog</title>
+    <link>http://my.xyemy.com/categories/ie%E5%85%BC%E5%AE%B9.html</link>
+    <description>Recent content in IE兼容 on miao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 01 Jun 2021 12:22:39 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/ie%E5%85%BC%E5%AE%B9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue在Ie浏览器兼容问题汇总调整</title>
+      <link>http://my.xyemy.com/post/2021/06/1/vue%E5%9C%A8ie%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%B0%83%E6%95%B4.html</link>
+      <pubDate>Tue, 01 Jun 2021 12:22:39 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2021/06/1/vue%E5%9C%A8ie%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%B0%83%E6%95%B4.html</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>动态给Js增加版本号 | miao blog</title>
+    <meta property="og:title" content="动态给Js增加版本号 - miao blog">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2021-12-23T10:50:40&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2021-12-23T10:50:40&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="动态给Js增加版本号">
+        
+    <meta name="author" content="enenen">
+    <meta property="og:url" content="http://my.xyemy.com/post/2021/12/23/%E5%8A%A8%E6%80%81%E7%BB%99js%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E5%8F%B7.html">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+        <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://my.xyemy.com/">
+                        miao blog
+                    </a>
+                
+                <p class="description">要做一个爱笑的小仙女</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://my.xyemy.com/">首页</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">动态给Js增加版本号</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年12月23日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/js'>JS</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <h2 id="动态给js增加版本号">动态给js增加版本号</h2>
+<blockquote>
+<p>否则上传导致页面缓存问题，看不到最新效果</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span>    var scripts <span style="color:#f92672">=</span> document.getElementsByTagName<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;script&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span>var i <span style="color:#f92672">=</span> 0;i &lt; scripts.length;i ++<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>scripts<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.src<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>            scripts<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.src <span style="color:#f92672">=</span> scripts<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.src+<span style="color:#e6db74">&#34;?t=&#34;</span>+new Date<span style="color:#f92672">()</span>.getTime<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
+</span></span></code></pre></div>
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/2021/06/1/vue%E5%9C%A8ie%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%B0%83%E6%95%B4.html">Vue在Ie浏览器兼容问题汇总调整</a></li>
+        
+        <li><a href="/post/2021/02/23/echarts%E5%9B%BE%E6%A0%87%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94x%E8%BD%B4%E6%96%87%E5%AD%97%E8%87%AA%E9%80%82%E5%BA%94.html">Echarts图标宽度自适应x轴文字自适应</a></li>
+        
+        <li><a href="/post/2020/12/01/firstblog.html">Firstblog</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/'></a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2022 <a href="http://my.xyemy.com/">miao blog By enenen</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+           
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://my.xyemy.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://my.xyemy.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html" title="VueAxios封装">VueAxios封装</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/03/21/%E5%AF%BC%E5%87%BA%E6%B5%81%E6%96%87%E4%BB%B6.html" title="导出流文件">导出流文件</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/03/15/ul.html" title="Ul">Ul</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2022/06/09/vue%E9%94%9A%E7%82%B9.html" title="Vue锚点">Vue锚点</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2022/06/09/vue%E5%AE%9A%E4%BD%8D%E6%BB%9A%E5%8A%A8.html" title="Vue定位滚动">Vue定位滚动</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2022/06/03/git.html" title="Git 撤回commit以及回退版本">Git 撤回commit以及回退版本</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2022/03/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html" title="滚动条样式修改">滚动条样式修改</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/12/23/%E5%8A%A8%E6%80%81%E7%BB%99js%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E5%8F%B7.html" title="动态给Js增加版本号">动态给Js增加版本号</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/06/1/vue%E5%9C%A8ie%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E8%B0%83%E6%95%B4.html" title="Vue在Ie浏览器兼容问题汇总调整">Vue在Ie浏览器兼容问题汇总调整</a>
+    </li>
+    
+    <li>
+        <a href="http://my.xyemy.com/post/2021/03/22/layui%E5%BC%80%E5%A7%8B%E6%97%B6%E9%97%B4%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4.html" title="Layui开始时间结束时间判断（旧版本layui.js）">Layui开始时间结束时间判断（旧版本layui.js）</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="http://my.xyemy.com/categories/css.html">css (3)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/echarts.html">Echarts (1)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/git.html">Git (1)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/html.html">HTML (4)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/ie%E5%85%BC%E5%AE%B9.html">IE兼容 (1)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/js.html">Js (10)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/layui.html">layui (1)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/vue.html">Vue (9)</a></li>
+    
+    <li><a href="http://my.xyemy.com/categories/%E8%A1%A8%E5%8D%95.html">表单 (4)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="http://my.xyemy.com/tags/checkbox.html">checkbox</a>
+    
+    <a href="http://my.xyemy.com/tags/git.html">Git</a>
+    
+    <a href="http://my.xyemy.com/tags/html.html">HTML</a>
+    
+    <a href="http://my.xyemy.com/tags/input.html">input</a>
+    
+    <a href="http://my.xyemy.com/tags/li%E6%A0%B7%E5%BC%8F.html">li样式</a>
+    
+    <a href="http://my.xyemy.com/tags/radio.html">radio</a>
+    
+    <a href="http://my.xyemy.com/tags/select.html">select</a>
+    
+    <a href="http://my.xyemy.com/tags/srcollto.html">srcollto</a>
+    
+    <a href="http://my.xyemy.com/tags/url.html">url</a>
+    
+    <a href="http://my.xyemy.com/tags/vue.html">vue</a>
+    
+    <a href="http://my.xyemy.com/tags/vueaxios.html">vueaxios</a>
+    
+    <a href="http://my.xyemy.com/tags/vueclic.html">vuecli(c)</a>
+    
+    <a href="http://my.xyemy.com/tags/vuecliw.html">vuecli(w)</a>
+    
+    <a href="http://my.xyemy.com/tags/%E6%95%B0%E7%BB%84.html">数组</a>
+    
+    <a href="http://my.xyemy.com/tags/%E6%97%B6%E9%97%B4.html">时间</a>
+    
+    <a href="http://my.xyemy.com/tags/%E7%A6%81%E6%AD%A2div%E7%82%B9%E5%87%BB.html">禁止div点击</a>
+    
+    <a href="http://my.xyemy.com/tags/%E7%A9%BA%E6%A0%BC.html">空格</a>
+    
+    <a href="http://my.xyemy.com/tags/%E8%A1%A8%E5%8D%95.html">表单</a>
+    
+    <a href="http://my.xyemy.com/tags/%E9%94%9A%E7%82%B9%E5%AE%9A%E4%BD%8D.html">锚点定位</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://my.xyemy.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
