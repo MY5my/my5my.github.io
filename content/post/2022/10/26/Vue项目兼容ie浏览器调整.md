@@ -7,4 +7,5 @@ isCJKLanguage: true
 categories: ["IE","Vue"]
 ---
 
-## vue 
+## ie浏览器下可能遇到的问题
+* 
