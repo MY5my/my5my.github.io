@@ -9,21 +9,24 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>时间 | miao blog</title>
-    <meta property="og:title" content="时间 - miao blog">
+    <title>Checkbox样式修改 | miao blog</title>
+    <meta property="og:title" content="Checkbox样式修改 - miao blog">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2022-11-01T10:17:58&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2022-11-01T10:17:58&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="时间">
+    <meta name="description" content="Checkbox样式修改">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/tags/%E6%97%B6%E9%97%B4.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2022/11/01/checkbox%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="http://my.xyemy.com/tags/%E6%97%B6%E9%97%B4/index.xml" title="miao blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -51,7 +54,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="http://my.xyemy.com/">首页</a>
+                    <a class="current" href="http://my.xyemy.com/">首页</a>
                     
                 </nav>
             </div>
@@ -67,44 +70,114 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        包含标签
-        <span class="keyword">时间</span>
-        的文章
-    </h3>
-    
-
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="http://my.xyemy.com/post/2021/03/22/layui%E5%BC%80%E5%A7%8B%E6%97%B6%E9%97%B4%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4.html">Layui开始时间结束时间判断（旧版本layui.js）</a>
-            </h1>
+            <h1 class="post-title">Checkbox样式修改</h1>
         </header>
         <date class="post-meta meta-date">
-            2021年3月22日
+            2022年11月1日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='/categories/layui'>layui</a>
+            <span class="meta-category"><a href='/categories/checkbox'>Checkbox</a></span>
             
         </div>
         
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
         <div class="post-content">
-            html &lt;div class=&#34;layui-inline&#34;&gt; &lt;label class=&#34;layui……
-            <p class="readmore"><a href="http://my.xyemy.com/post/2021/03/22/layui%E5%BC%80%E5%A7%8B%E6%97%B6%E9%97%B4%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4.html">阅读全文</a></p>
+            <h2 id="heading"></h2>
+<blockquote>
+<p>默认样式</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>    input<span style="color:#f92672">[</span>type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    width: 16px;
+</span></span><span style="display:flex;"><span>    height: 16px;
+</span></span><span style="display:flex;"><span>    //margin: <span style="color:#ae81ff">0</span> 4px <span style="color:#ae81ff">0</span> 0;
+</span></span><span style="display:flex;"><span>    //使用appearance: none隐藏默认checkbox的框框，重写框框样式
+</span></span><span style="display:flex;"><span>    -webkit-appearance: none;
+</span></span><span style="display:flex;"><span>    -moz-appearance: none;
+</span></span><span style="display:flex;"><span>    appearance: none;
+</span></span><span style="display:flex;"><span>    position: absolute;
+</span></span><span style="display:flex;"><span>    border: 1px solid <span style="color:#75715e">#d9d9d9;</span>
+</span></span><span style="display:flex;"><span>    border-radius: 2px;
+</span></span><span style="display:flex;"><span>    cursor: pointer;
+</span></span><span style="display:flex;"><span>    //display: inline-block;
+</span></span><span style="display:flex;"><span>    float: left;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>未被选中的样式</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>input <span style="color:#f92672">[</span>type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#f92672">]</span>::before <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    content: <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>    position: absolute;
+</span></span><span style="display:flex;"><span>    top: 0;
+</span></span><span style="display:flex;"><span>    left: 0;
+</span></span><span style="display:flex;"><span>    background: <span style="color:#75715e">#fff;</span>
+</span></span><span style="display:flex;"><span>    width: 100%;
+</span></span><span style="display:flex;"><span>    height: 100%;
+</span></span><span style="display:flex;"><span>    border: 0px;
+</span></span><span style="display:flex;"><span>    border-radius: 2px;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>选中的样式</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>input<span style="color:#f92672">[</span>type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span><span style="color:#f92672">]</span>:checked::before <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    content: <span style="color:#e6db74">&#34;\2713&#34;</span>; /*<span style="color:#ae81ff">\2</span><span style="color:#ae81ff">713</span> 代表对勾*/
+</span></span><span style="display:flex;"><span>    background-color: <span style="color:#75715e">#61a3e0;</span>
+</span></span><span style="display:flex;"><span>    position: absolute;
+</span></span><span style="display:flex;"><span>    top: -1px;
+</span></span><span style="display:flex;"><span>    left: -1px;
+</span></span><span style="display:flex;"><span>    width: 100%;
+</span></span><span style="display:flex;"><span>    height: 100%;
+</span></span><span style="display:flex;"><span>    border: 1px solid <span style="color:#75715e">#61a3e0;</span>
+</span></span><span style="display:flex;"><span>    border-radius: 2px;
+</span></span><span style="display:flex;"><span>    color: <span style="color:#75715e">#fff;</span>
+</span></span><span style="display:flex;"><span>    font-size: 15px;
+</span></span><span style="display:flex;"><span>    font-weight: 700;
+</span></span><span style="display:flex;"><span>    text-align: center;
+</span></span><span style="display:flex;"><span>    line-height: 16px;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/2022/11/01/element-checkbox%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html">Element Checkbox样式修改</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/checkbox%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4'>Checkbox样式调整</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-
     
 
-
-
-
-
+    
+    
 </div>
 
                     <footer id="footer">
@@ -127,6 +200,16 @@
 </footer>
 
 
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>

@@ -6,7 +6,16 @@
     <description>Recent content in Checkbox样式调整 on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 01 Nov 2022 09:11:15 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/checkbox%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Nov 2022 10:17:58 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/checkbox%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Checkbox样式修改</title>
+      <link>http://my.xyemy.com/post/2022/11/01/checkbox%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html</link>
+      <pubDate>Tue, 01 Nov 2022 10:17:58 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2022/11/01/checkbox%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html</guid>
+      <description>默认样式 input[type=&amp;#34;checkbox&amp;#34;] { width: 16px; height: 16px; //margin: 0 4px 0 0; //使用a</description>
+    </item>
+    
     <item>
       <title>Element Checkbox样式修改</title>
       <link>http://my.xyemy.com/post/2022/11/01/element-checkbox%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html</link>
