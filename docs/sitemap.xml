@@ -3,18 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://my.xyemy.com/categories.html</loc>
-    <lastmod>2022-10-26T11:03:43+08:00</lastmod>
+    <lastmod>2022-11-01T09:11:15+08:00</lastmod>
   </url><url>
-    <loc>http://my.xyemy.com/categories/ie.html</loc>
-    <lastmod>2022-10-26T11:03:43+08:00</lastmod>
+    <loc>http://my.xyemy.com/categories/checkbox.html</loc>
+    <lastmod>2022-11-01T09:11:15+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/tags/checkbox%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4.html</loc>
+    <lastmod>2022-11-01T09:11:15+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/post/2022/11/01/element-checkbox%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html</loc>
+    <lastmod>2022-11-01T09:11:15+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/</loc>
-    <lastmod>2022-10-26T11:03:43+08:00</lastmod>
+    <lastmod>2022-11-01T09:11:15+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/post.html</loc>
-    <lastmod>2022-10-26T11:03:43+08:00</lastmod>
+    <lastmod>2022-11-01T09:11:15+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/tags.html</loc>
+    <lastmod>2022-11-01T09:11:15+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/categories/vue.html</loc>
+    <lastmod>2022-11-01T09:11:15+08:00</lastmod>
+  </url><url>
+    <loc>http://my.xyemy.com/categories/ie.html</loc>
     <lastmod>2022-10-26T11:03:43+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/post/2022/10/26/vue%E9%A1%B9%E7%9B%AE%E5%85%BC%E5%AE%B9ie%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E6%95%B4.html</loc>
@@ -33,9 +45,6 @@
     <lastmod>2022-07-09T11:38:26+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/tags/li%E6%A0%B7%E5%BC%8F.html</loc>
-    <lastmod>2022-07-09T11:38:26+08:00</lastmod>
-  </url><url>
-    <loc>http://my.xyemy.com/tags.html</loc>
     <lastmod>2022-07-09T11:38:26+08:00</lastmod>
   </url><url>
     <loc>http://my.xyemy.com/post/2021/03/15/ul.html</loc>
