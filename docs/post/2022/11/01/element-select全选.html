@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>动态给Js增加版本号 | miao blog</title>
-    <meta property="og:title" content="动态给Js增加版本号 - miao blog">
+    <title>Element Select全选 | miao blog</title>
+    <meta property="og:title" content="Element Select全选 - miao blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2021-12-23T10:50:40&#43;08:00'>
+    <meta property="article:published_time" content='2022-11-01T14:40:48&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2021-12-23T10:50:40&#43;08:00'>
+    <meta property="article:modified_time" content='2022-11-01T14:40:48&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="动态给Js增加版本号">
+    <meta name="description" content="Element Select全选">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/post/2021/12/23/%E5%8A%A8%E6%80%81%E7%BB%99js%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E5%8F%B7.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2022/11/01/element-select%E5%85%A8%E9%80%89.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -72,16 +72,18 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">动态给Js增加版本号</h1>
+            <h1 class="post-title">Element Select全选</h1>
         </header>
         <date class="post-meta meta-date">
-            2021年12月23日
+            2022年11月1日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='/categories/js'>JS</a></span>
+            <span class="meta-category"><a href='/categories/vue'>Vue</a></span>
+            
+            <span class="meta-category"><a href='/categories/element'>element</a></span>
             
         </div>
         
@@ -93,18 +95,51 @@
         
         
         <div class="post-content">
-            <h2 id="动态给js增加版本号">动态给js增加版本号</h2>
-<blockquote>
-<p>否则上传导致页面缓存问题，看不到最新效果</p>
+            <blockquote>
+<p>vue html代码</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;script&gt;
-</span></span><span style="display:flex;"><span>    var scripts <span style="color:#f92672">=</span> document.getElementsByTagName<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;script&#34;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span>var i <span style="color:#f92672">=</span> 0;i &lt; scripts.length;i ++<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>scripts<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.src<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>            scripts<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.src <span style="color:#f92672">=</span> scripts<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.src+<span style="color:#e6db74">&#34;?t=&#34;</span>+new Date<span style="color:#f92672">()</span>.getTime<span style="color:#f92672">()</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>//popper-class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ksSelect&#34;</span> 为自定义样式 
+</span></span><span style="display:flex;"><span>//popper-append-to-body<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> 是否将弹出框插入至 body 元素
+</span></span><span style="display:flex;"><span>//multiple 多选
+</span></span><span style="display:flex;"><span>&lt;el-select v-model<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;selData&#34;</span> multiple placeholder<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;请选择&#34;</span> popper-class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ksSelect&#34;</span> :popper-append-to-body<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;el-checkbox v-model<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkedFlag&#34;</span> @change<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;selectAll&#39;</span>&gt;全选&lt;/el-checkbox&gt;
+</span></span><span style="display:flex;"><span>    &lt;el-option
+</span></span><span style="display:flex;"><span>      v-for<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item in allData&#34;</span>
+</span></span><span style="display:flex;"><span>      :key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item.hospName&#34;</span>
+</span></span><span style="display:flex;"><span>      :label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item.hospName&#34;</span>
+</span></span><span style="display:flex;"><span>      :value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item.hospName&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/el-option&gt;
+</span></span><span style="display:flex;"><span>&lt;/el-select&gt;
+</span></span></code></pre></div><blockquote>
+<p>vue js代码  先定义变量</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>data<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>       selData: <span style="color:#f92672">[]</span>,//选择的数据
+</span></span><span style="display:flex;"><span>       allData: <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">{</span>id:1,hospName:<span style="color:#e6db74">&#39;名称1&#39;</span>,<span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">{</span>id:2,hospName:<span style="color:#e6db74">&#39;名称2&#39;</span>,<span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">{</span>id:3,hospName:<span style="color:#e6db74">&#39;名称3&#39;</span>,<span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">{</span>id:4,hospName:<span style="color:#e6db74">&#39;名称4&#39;</span>,<span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">]</span>,//所有数据
+</span></span><span style="display:flex;"><span>       checkedFlag: false,//是否全选
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>methods:<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span> //全选/取消全选
+</span></span><span style="display:flex;"><span>  selectAll<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    this.selData <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>this.checkedFlag<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      this.allData.forEach<span style="color:#f92672">((</span>item<span style="color:#f92672">)</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        this.selData.push<span style="color:#f92672">(</span>item.hospName<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">})</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      this.selData <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>&lt;/script&gt;
+</span></span><span style="display:flex;"><span>    // console.log<span style="color:#f92672">(</span>this.selData,<span style="color:#e6db74">&#39;---选择的数据&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div>
         </div>
 
@@ -116,6 +151,12 @@
 <div class="post-archive">
     <h2>See Also</h2>
     <ul class="listing">
+        
+        <li><a href="/post/2021/03/21/%E5%AF%BC%E5%87%BA%E6%B5%81%E6%96%87%E4%BB%B6.html">导出流文件</a></li>
+        
+        <li><a href="/post/2022/03/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html">滚动条样式修改</a></li>
+        
+        <li><a href="/post/2021/12/23/%E5%8A%A8%E6%80%81%E7%BB%99js%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E5%8F%B7.html">动态给Js增加版本号</a></li>
         
         <li><a href="/post/2021/02/23/echarts%E5%9B%BE%E6%A0%87%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94x%E8%BD%B4%E6%96%87%E5%AD%97%E8%87%AA%E9%80%82%E5%BA%94.html">Echarts图标宽度自适应x轴文字自适应</a></li>
         

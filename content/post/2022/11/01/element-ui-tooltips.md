@@ -2,9 +2,9 @@
 title: "Element Ui Tooltips"
 date: 2022-11-01T13:53:26+08:00
 draft: false
-tags: ["element"]
+tags: ["tooltips"]
 isCJKLanguage: true
-categories: ["Vue","element","tooltips"]
+categories: ["Vue","element"]
 ---
 
 ## 正常情况
