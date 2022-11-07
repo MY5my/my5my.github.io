@@ -96,10 +96,111 @@
         
         <div class="post-content">
             <h2 id="ie浏览器下可能遇到的问题">ie浏览器下可能遇到的问题</h2>
+<blockquote>
+<p>vue只兼容IE8以上的版本
+IE不兼容 axios的promiss对象;
+IE不兼容es6语法；
+IE上css部分样式不支持 错乱问题
+插件版本太高不支持</p>
+</blockquote>
+<h2 id="解决办法">解决办法</h2>
+<blockquote>
+<p>安装插件</p>
+</blockquote>
 <ul>
-<li></li>
+<li>安装 babel-polyfill</li>
 </ul>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span> npm install --save-dev babel-polyfill 或
+</span></span><span style="display:flex;"><span> npm install  babel-polyfill
+</span></span></code></pre></div><ul>
+<li>在main.js 中首行引入,确保全面加载</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import <span style="color:#e6db74">&#34;babel-polyfill&#34;</span>;
+</span></span></code></pre></div><ul>
+<li>配置文件 配置webpack.base.conf.js</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>entry: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    // app:<span style="color:#e6db74">&#39;./src/main.js&#39;</span>
+</span></span><span style="display:flex;"><span>    app: <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;babel-polyfill&#39;</span>, <span style="color:#e6db74">&#39;./src/main.js&#39;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>,
+</span></span></code></pre></div><p>
+        <a data-fancybox="gallery" href="/images/vue/iepz.jpg">
+            <img class="mx-auto" alt="配置文件" src="/images/vue/iepz.jpg" />
+        </a>
+    </p>
+<blockquote>
+<p>项目中使用了ES6 promise对象</p>
+</blockquote>
+<ul>
+<li>安装es6-promise</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span> npm install es6-promise 
+</span></span><span style="display:flex;"><span> npm install --save-dev es6-promise
+</span></span></code></pre></div><ul>
+<li>在main.js引入， 用于在node或浏览器中支持ES6 与CommonJS。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import Es6Promise from <span style="color:#e6db74">&#39;es6-promise&#39;</span>
+</span></span><span style="display:flex;"><span>Es6Promise.polyfill<span style="color:#f92672">()</span>
+</span></span></code></pre></div><p>如果引入使用require(&rsquo;es6-promise&rsquo;).polyfill()则可能会遇到下方错误</p>
+<blockquote>
+<p>如果项目中require和import混用的原因，在做了IE兼容之后打包会出现问题，会报以下错误：</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Cannot assign to read only property <span style="color:#e6db74">&#39;exports&#39;</span> of object <span style="color:#e6db74">&#39;#&lt;Object&gt;&#39;</span>
+</span></span></code></pre></div><ul>
+<li>需要安装babel-plugin-transform-es2015-modules-commonjs插件来解决报错</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>npm install --save-dev babel-plugin-transform-es2015-modules-commonjs
+</span></span></code></pre></div><ul>
+<li>在.babelrc 中添加该插件</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#e6db74">&#34;plugins&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;transform-es2015-modules-commonjs&#34;</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><ul>
+<li>相关配置vue.config.js文件如下修改 chainWebpack方法中添加</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>config.entry.app <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;babel-polyfill&#34;</span>, <span style="color:#e6db74">&#34;./src/main.js&#34;</span><span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>config.module.rule<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;compile&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>      .test<span style="color:#f92672">(</span>/<span style="color:#ae81ff">\.</span>js$/<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>      .include
+</span></span><span style="display:flex;"><span>      .add<span style="color:#f92672">(</span>resolve<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;src&#39;</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>      .add<span style="color:#f92672">(</span>resolve<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;test&#39;</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>      .add<span style="color:#f92672">(</span>resolve<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;node_modules/webpack-dev-server/client&#39;</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>      .add<span style="color:#f92672">(</span>resolve<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;node_modules&#39;</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>      .end<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>      .use<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;babel&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>      .loader<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;babel-loader&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>      .options<span style="color:#f92672">({</span>
+</span></span><span style="display:flex;"><span>        presets: <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;@babel/preset-env&#39;</span>, <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            modules: false
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">}]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">})</span>; 
+</span></span></code></pre></div><ul>
+<li>babel.config.js中对应修改，添加sourceType和useBuiltIns：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>module.exports <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  presets: <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>    // <span style="color:#e6db74">&#39;@vue/cli-plugin-babel/preset&#39;</span>, //文件原始内容
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;@vue/app&#39;</span>, <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      useBuiltIns: <span style="color:#e6db74">&#39;entry&#39;</span>,             //添加的内容
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">]</span>,
+</span></span><span style="display:flex;"><span>  sourceType: <span style="color:#e6db74">&#39;unambiguous&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>main.js 文件引入</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import <span style="color:#e6db74">&#39;babel-polyfill&#39;</span>
+</span></span><span style="display:flex;"><span>import Es6Promise from <span style="color:#e6db74">&#39;es6-promise&#39;</span>
+</span></span><span style="display:flex;"><span>require<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;es6-promise&#39;</span><span style="color:#f92672">)</span>.polyfill<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>Es6Promise.polyfill<span style="color:#f92672">()</span>Plain Text
+</span></span></code></pre></div><blockquote>
+</blockquote>
+<blockquote>
+<p>例如 swiper版本太高不支持   可能需要降低版本</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>npm install --save-dev swiper@3.4.2 
+</span></span></code></pre></div>
         </div>
 
         
@@ -107,29 +208,12 @@
 
         
 
-<div class="post-archive">
-    <h2>See Also</h2>
-    <ul class="listing">
-        
-        <li><a href="/post/2021/03/21/%E5%AF%BC%E5%87%BA%E6%B5%81%E6%96%87%E4%BB%B6.html">导出流文件</a></li>
-        
-        <li><a href="/post/2022/03/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html">滚动条样式修改</a></li>
-        
-        <li><a href="/post/2021/12/23/%E5%8A%A8%E6%80%81%E7%BB%99js%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E5%8F%B7.html">动态给Js增加版本号</a></li>
-        
-        <li><a href="/post/2021/02/23/echarts%E5%9B%BE%E6%A0%87%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94x%E8%BD%B4%E6%96%87%E5%AD%97%E8%87%AA%E9%80%82%E5%BA%94.html">Echarts图标宽度自适应x轴文字自适应</a></li>
-        
-        <li><a href="/post/2020/12/01/firstblog.html">Firstblog</a></li>
-        
-    </ul>
-</div>
-
 
         <div class="post-meta meta-tags">
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/'></a></li>
+                <li><a href='/tags/ie'>IE</a></li>
                 
             </ul>
             
@@ -292,6 +376,8 @@
     <a href="http://my.xyemy.com/tags/git.html">Git</a>
     
     <a href="http://my.xyemy.com/tags/html.html">HTML</a>
+    
+    <a href="http://my.xyemy.com/tags/ie.html">IE</a>
     
     <a href="http://my.xyemy.com/tags/input.html">input</a>
     
