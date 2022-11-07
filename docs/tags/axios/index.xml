@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Axios on miao blog</title>
+    <link>http://my.xyemy.com/tags/axios.html</link>
+    <description>Recent content in Axios on miao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 04 Aug 2022 10:04:37 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/axios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VueAxios封装</title>
+      <link>http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html</link>
+      <pubDate>Thu, 04 Aug 2022 10:04:37 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html</guid>
+      <description>全局声明引用 import utils from &amp;#34;./asse</description>
+    </item>
+    
+  </channel>
+</rss>

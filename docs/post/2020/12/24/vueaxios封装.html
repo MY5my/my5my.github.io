@@ -93,12 +93,118 @@
         
         
         <div class="post-content">
-            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>在main.js里import websocket from <span style="color:#e6db74">&#39;./websocket.js&#39;</span>,后，
-</span></span><span style="display:flex;"><span>需要将websocket挂载到Vue中，Vue.prototype.$webscoket <span style="color:#f92672">=</span> websocket。
-</span></span><span style="display:flex;"><span>在组件中直接this.$webscoket就可以使用了
-</span></span></code></pre></div><h2 id="一个js文件是可以有多个-export但是一个js文件中只能有一个export-default">一个js文件是可以有多个 export，但是一个js文件中只能有一个export default</h2>
-<p>想要多个变量时</p>
-
+            <h2 id="全局声明引用">全局声明引用</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import utils from <span style="color:#e6db74">&#34;./assets/common/utils&#34;</span>//公共的js文件
+</span></span><span style="display:flex;"><span>需要将utils挂载到Vue中，Vue.prototype.$utils <span style="color:#f92672">=</span> utils;
+</span></span><span style="display:flex;"><span>在组件中直接this.$utils就可以使用了
+</span></span></code></pre></div><blockquote>
+<p>一个js文件是可以有多个 export，但是一个js文件中只能有一个export default
+##多个变量在一个js 文件中声明 调用公共方法</p>
+</blockquote>
+<p>utils.js中封装axios方法</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import axios from <span style="color:#e6db74">&#39;axios&#39;</span>;
+</span></span><span style="display:flex;"><span>// axios.defaults.headers<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;token&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> sessionStorage.getItem<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;token&#39;</span><span style="color:#f92672">)</span> ? sessionStorage.getItem<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;token&#39;</span><span style="color:#f92672">)</span> : <span style="color:#e6db74">&#39;&#39;</span>; /* 让ajax携带token */
+</span></span><span style="display:flex;"><span>export default <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  publicUrl: <span style="color:#e6db74">&#39;公共请求&#39;</span>,
+</span></span><span style="display:flex;"><span>  request,//下方请求封装
+</span></span><span style="display:flex;"><span>  showLoading, 
+</span></span><span style="display:flex;"><span>  hideLoading,
+</span></span><span style="display:flex;"><span>  data<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>封装请求</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> request<span style="color:#f92672">(</span>method, url, params, form, showError, code<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  sessionStorage.setItem<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;token&#39;</span>, <span style="color:#e6db74">&#39;token&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  var contetType <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>, dataGet, dataPost;
+</span></span><span style="display:flex;"><span>  // showError 是否展示错误信息 不传默认为展示
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>showError <span style="color:#f92672">||</span> showError <span style="color:#f92672">==</span> undefined<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    showError <span style="color:#f92672">=</span> true
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    showError <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  //返回值是否有code 不穿默认有
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>code <span style="color:#f92672">||</span> code <span style="color:#f92672">==</span> undefined<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    code <span style="color:#f92672">=</span> true
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    code <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>!form<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    contetType <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;application/json; charset=utf-8&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    contetType <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;application/x-www-form-urlencoded&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  // <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;get&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  //   dataGet <span style="color:#f92672">=</span> params
+</span></span><span style="display:flex;"><span>  // <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  //   dataPost <span style="color:#f92672">=</span> params
+</span></span><span style="display:flex;"><span>  // <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> new Promise<span style="color:#f92672">((</span>resolve, reject<span style="color:#f92672">)</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    axios<span style="color:#f92672">({</span>
+</span></span><span style="display:flex;"><span>      headers: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Content-Type&#39;</span>: contetType,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;token&#39;</span>: sessionStorage.getItem<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;token&#39;</span><span style="color:#f92672">)</span> ? sessionStorage.getItem<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;token&#39;</span><span style="color:#f92672">)</span> : <span style="color:#e6db74">&#39;&#39;</span> /* 让ajax携带token */
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>      method: method,
+</span></span><span style="display:flex;"><span>      url: url,
+</span></span><span style="display:flex;"><span>      data: params, //get 请求直接在请求url 后面拼接参数
+</span></span><span style="display:flex;"><span>      withCredentials: true,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">})</span>.then<span style="color:#f92672">((</span>res<span style="color:#f92672">)</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>code<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>res.data.code <span style="color:#f92672">==</span> -1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>          console.log<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;请先登录个人帐户&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>          resolve<span style="color:#f92672">(</span>res.data<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        resolve<span style="color:#f92672">(</span>res<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">})</span>.catch<span style="color:#f92672">((</span>res<span style="color:#f92672">)</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>showError<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        // that.$message<span style="color:#f92672">({</span>
+</span></span><span style="display:flex;"><span>        //     message: res.data.message,
+</span></span><span style="display:flex;"><span>        //     type: <span style="color:#e6db74">&#39;warning&#39;</span>
+</span></span><span style="display:flex;"><span>        // <span style="color:#f92672">})</span>;
+</span></span><span style="display:flex;"><span>        console.log<span style="color:#f92672">(</span>res, <span style="color:#e6db74">&#39;请求错误信息&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">})</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">})</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>加载loading</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>// 展示loading
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> showLoading<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  let that <span style="color:#f92672">=</span> this;
+</span></span><span style="display:flex;"><span>  that.loading <span style="color:#f92672">=</span> Loading.service<span style="color:#f92672">({</span>
+</span></span><span style="display:flex;"><span>    // lock: true,// 打开会导致首页 点击底部tab 页面返回顶部
+</span></span><span style="display:flex;"><span>    text: <span style="color:#e6db74">&#39;加载中...&#39;</span>,
+</span></span><span style="display:flex;"><span>    spinner: <span style="color:#e6db74">&#39;el-icon-loading&#39;</span>,
+</span></span><span style="display:flex;"><span>    customClass: <span style="color:#e6db74">&#39;loadCss&#39;</span>,
+</span></span><span style="display:flex;"><span>    background: <span style="color:#e6db74">&#39;rgba(0, 0, 0, 0.7)&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">})</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>//隐藏loading
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> hideLoading<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  this.loading.close<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>.vue 文件中使用</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>getData<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>    this.$utils.showLoading<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span>        this.$utils.request<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;get&#39;</span>, this.$utils.publicUrl + <span style="color:#e6db74">&#39;接口&#39;</span>, <span style="color:#e6db74">&#39;参数&#39;</span>, false<span style="color:#f92672">)</span>.then<span style="color:#f92672">(</span>res <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            this.$utils.hideLoading<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span>            // console.log<span style="color:#f92672">(</span>res.data, <span style="color:#e6db74">&#39;---unit_detail&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">})</span>.catch<span style="color:#f92672">(</span>res <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>          // console.log<span style="color:#f92672">(</span>222222<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">})</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
         </div>
 
         
@@ -106,29 +212,12 @@
 
         
 
-<div class="post-archive">
-    <h2>See Also</h2>
-    <ul class="listing">
-        
-        <li><a href="/post/2021/03/21/%E5%AF%BC%E5%87%BA%E6%B5%81%E6%96%87%E4%BB%B6.html">导出流文件</a></li>
-        
-        <li><a href="/post/2022/03/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html">滚动条样式修改</a></li>
-        
-        <li><a href="/post/2021/12/23/%E5%8A%A8%E6%80%81%E7%BB%99js%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E5%8F%B7.html">动态给Js增加版本号</a></li>
-        
-        <li><a href="/post/2021/02/23/echarts%E5%9B%BE%E6%A0%87%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94x%E8%BD%B4%E6%96%87%E5%AD%97%E8%87%AA%E9%80%82%E5%BA%94.html">Echarts图标宽度自适应x轴文字自适应</a></li>
-        
-        <li><a href="/post/2020/12/01/firstblog.html">Firstblog</a></li>
-        
-    </ul>
-</div>
-
 
         <div class="post-meta meta-tags">
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/'></a></li>
+                <li><a href='/tags/axios'>Axios</a></li>
                 
             </ul>
             
@@ -279,6 +368,8 @@
     <section class="widget">
         <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
 <div class="tagcloud">
+    
+    <a href="http://my.xyemy.com/tags/axios.html">Axios</a>
     
     <a href="http://my.xyemy.com/tags/checkbox.html">checkbox</a>
     

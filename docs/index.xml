@@ -58,7 +58,7 @@
       <pubDate>Thu, 04 Aug 2022 10:04:37 +0800</pubDate>
       
       <guid>http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html</guid>
-      <description>在main.js里import websocket from &amp;#3</description>
+      <description>全局声明引用 import utils from &amp;#34;./asse</description>
     </item>
     
     <item>
