@@ -1,8 +1,8 @@
 ---
-title: "禁止div点击"
+title: "禁止点击"
 date: 2021-03-15T10:52:31+08:00
 draft: false
-tags: ["禁止div点击"]
+tags: []
 isCJKLanguage: true
 categories: ["Css","Js"]
 ---
