@@ -35,40 +35,14 @@ $.fn.enable = function () {
 $("#@id").disable();
 ```
 
-# 超出显示省略号
->普通模式
+
+
+>vue checkbox禁止点击
+* vue
 ```shell script
-display:inline-block; 
-overflow:hidden; 
-white-space:nowrap; 
-text-overflow:ellipsis;
+<input type="checkbox" v-model="threeCheckList" :value="item2.subjectSecond"  v-bind:disabled="item2.disabled==true" :class="{'disabledCss':item2.disabled==true}">
 ```
-
-#英文单词换行
+* css
 ```shell script
-word-break:break-all;
-word-wrap:break-word;
-```
-
-#两行截取  2行超出显示...
-```shell script
-display: -webkit-box;
-overflow: hidden;
-white-space: normal!important;
-text-overflow: ellipsis;
-word-wrap: break-word;
--webkit-line-clamp: 2;
--webkit-box-orient: vertical;
-```
-
-#select
-```shell script
-
-<select onmouseover="selbox($(this))" ></select>
-<script>
-function selbox(a){
-  var val = a.val();
-  a.attr("title",val);
-}
-</script>
+ .disabledCss {cursor: not-allowed !important;} //鼠标移上去显示禁止小图标
 ```

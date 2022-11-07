@@ -9,24 +9,21 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Vue Cli create搭建 | miao blog</title>
-    <meta property="og:title" content="Vue Cli create搭建 - miao blog">
+    <title>css | miao blog</title>
+    <meta property="og:title" content="css - miao blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-12-23T13:36:03&#43;08:00'>
-        
-        
-    <meta property="article:modified_time" content='2020-12-23T13:36:03&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Vue Cli create搭建">
+    <meta name="description" content="css">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/post/2020/12/23/vue-cli%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE.html">
+    <meta property="og:url" content="http://my.xyemy.com/tags/css.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml" href="http://my.xyemy.com/tags/css/index.xml" title="miao blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -54,7 +51,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="http://my.xyemy.com/">首页</a>
+                    <a class="" href="http://my.xyemy.com/">首页</a>
                     
                 </nav>
             </div>
@@ -70,148 +67,44 @@
                     
 <div class="res-cons">
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">Vue Cli create搭建</h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年12月23日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/vue'>Vue</a></span>
-            
-        </div>
-        
-        
-        <div class="post-meta">
-            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                    阅读</span></span>
-        </div>
-        
-        
-        <div class="post-content">
-            <h2 id="vue-createvue--cli3x-版本的初始方式-启动方式默认为-npm-run-serve">vue create：vue -cli3.x 版本的初始方式 ，启动方式默认为 npm run serve</h2>
-<blockquote>
-<p>在终端输入以下命令 回车后自定义配置的话选择Manually select features: 自定义配置
-
-        <a data-fancybox="gallery" href="/images/vue/1.jpg">
-            <img class="mx-auto" alt="第一步" src="/images/vue/1.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>回车后根据自己的需求添加配置项（上下是切换配置项，通过空格键选中配置项） 回车
-
-        <a data-fancybox="gallery" href="/images/vue/2.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/2.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>选择版本 2.x or 3.x 回车
-
-        <a data-fancybox="gallery" href="/images/vue/3.jpg">
-            <img class="mx-auto" alt="选择版本" src="/images/vue/3.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>选择是否使用路由 history router，其实直白来说就是是否路径带 # 号，建议选择 N，否则服务器还要进行配置 回车</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Use history mode <span style="color:#66d9ef">for</span> router? <span style="color:#f92672">(</span>Requires proper server setup <span style="color:#66d9ef">for</span> index fallback in production<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>Y/n<span style="color:#f92672">)</span>
-</span></span></code></pre></div><blockquote>
-<p>css 的预处理器我选择的是 Sass/SCSS(with dart-sass) 。node-sass是自动编译实时的，dart-sass需要保存后才会生效 回车
-
-        <a data-fancybox="gallery" href="/images/vue/4.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/4.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>选择ESLint的代码规范，此处我使用 Standard代码规范 回车
-
-        <a data-fancybox="gallery" href="/images/vue/5.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/5.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>选择什么时候进行代码校验，Lint on save 保存就检查，Lint and fix on commit   fix 或者 commit 的时候检查，建议第一个 回车
-
-        <a data-fancybox="gallery" href="/images/vue/6.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/6.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>选择 Babel、PostCSS、ESLint配置文件存放位置，此处选择单独保存在各自的配置文件中 回车
-In dedicated config files 存放到独立文件中，In package.json 存放到 package.json 中
-
-        <a data-fancybox="gallery" href="/images/vue/7.jpg">
-            <img class="mx-auto" alt="选择配置" src="/images/vue/7.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>最后就是是否保存本次的配置了，N 不记录，如果选择 Y 需要输入保存名字 回车</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Save this as a preset <span style="color:#66d9ef">for</span> future projects? <span style="color:#f92672">(</span>y/N<span style="color:#f92672">)</span> n
-</span></span></code></pre></div><blockquote>
-<p>等待创建项目
-
-        <a data-fancybox="gallery" href="/images/vue/8.jpg">
-            <img class="mx-auto" alt="等待创建" src="/images/vue/8.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>出现如图红框所示的提示，就搭建成功
-
-        <a data-fancybox="gallery" href="/images/vue/9.jpg">
-            <img class="mx-auto" alt="成功" src="/images/vue/9.jpg" />
-        </a>
-    </p>
-</blockquote>
-<blockquote>
-<p>进入项目目录，直接输入 npm run serve 就可以了
-
-        <a data-fancybox="gallery" href="/images/vue/10.jpg">
-            <img class="mx-auto" alt="运行项目" src="/images/vue/10.jpg" />
-        </a>
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">css</span>
+        的文章
+    </h3>
     
 
-        <a data-fancybox="gallery" href="/images/vue/11.jpg">
-            <img class="mx-auto" alt="运行项目" src="/images/vue/11.jpg" />
-        </a>
-    </p>
-</blockquote>
-
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://my.xyemy.com/post/2022/11/07/%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7.html">超出显示省略号</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年11月7日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='/categories/css'>Css</a>
+            
         </div>
-
         
-
-
-        
-
-
-        <div class="post-meta meta-tags">
-            
-            <ul class="clearfix">
-                
-                <li><a href='/tags/vueclic'>vuecli(c)</a></li>
-                
-            </ul>
-            
+        <div class="post-content">
+            超出显示省略号 普通模式 display:inline-block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; #按照英文……
+            <p class="readmore"><a href="http://my.xyemy.com/post/2022/11/07/%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7.html">阅读全文</a></p>
         </div>
     </article>
     
-    
 
     
-    
+
+
+
+
+
 </div>
 
                     <footer id="footer">
@@ -234,16 +127,6 @@ In dedicated config files 存放到独立文件中，In package.json 存放到 p
 </footer>
 
 
-    
-    <script type="text/javascript">
-        window.MathJax = {
-            tex2jax: {
-                inlineMath: [['$', '$']],
-                processEscapes: true
-                }
-            };
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>

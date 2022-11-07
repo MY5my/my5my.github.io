@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>css on miao blog</title>
+    <link>http://my.xyemy.com/tags/css.html</link>
+    <description>Recent content in css on miao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 07 Nov 2022 14:29:04 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>超出显示省略号</title>
+      <link>http://my.xyemy.com/post/2022/11/07/%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7.html</link>
+      <pubDate>Mon, 07 Nov 2022 14:29:04 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2022/11/07/%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7.html</guid>
+      <description>超出显示省略号 普通模式 display:inline-block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; #按照英文</description>
+    </item>
+    
+  </channel>
+</rss>
