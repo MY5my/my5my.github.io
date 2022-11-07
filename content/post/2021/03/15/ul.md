@@ -4,7 +4,7 @@ date: 2022-07-09T11:38:26+08:00
 draft: false
 tags: ["li样式"]
 isCJKLanguage: true
-categories: ["css"]
+categories: ["Css"]
 ---
 ### 第一个li
 ```shell script

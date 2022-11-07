@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>css on miao blog</title>
+    <title>Css on miao blog</title>
     <link>http://my.xyemy.com/categories/css.html</link>
-    <description>Recent content in css on miao blog</description>
+    <description>Recent content in Css on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 07 Nov 2022 14:29:04 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/css/index.xml" rel="self" type="application/rss+xml" />
@@ -14,6 +14,15 @@
       
       <guid>http://my.xyemy.com/post/2022/11/07/%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7.html</guid>
       <description>超出显示省略号 普通模式 display:inline-block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; #按照英文</description>
+    </item>
+    
+    <item>
+      <title>Checkbox样式修改</title>
+      <link>http://my.xyemy.com/post/2022/11/01/checkbox%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html</link>
+      <pubDate>Tue, 01 Nov 2022 10:17:58 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2022/11/01/checkbox%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html</guid>
+      <description>默认样式 input[type=&amp;#34;checkbox&amp;#34;] { width: 16px; height: 16px; //margin: 0 4px 0 0; //使用a</description>
     </item>
     
     <item>

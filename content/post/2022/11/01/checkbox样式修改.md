@@ -2,9 +2,9 @@
 title: "Checkbox样式修改"
 date: 2022-11-01T10:17:58+08:00
 draft: false
-tags: ["Checkbox样式调整"]
+tags: ["checkbox"]
 isCJKLanguage: true
-categories: ["Checkbox"]
+categories: ["Css"]
 ---
 
 ##
