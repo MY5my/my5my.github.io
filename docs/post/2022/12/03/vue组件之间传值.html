@@ -93,15 +93,74 @@
         
         
         <div class="post-content">
-            <h2 id="组件之间关系">组件之间关系</h2>
+            <h1 id="父子组件间通信">父子组件间通信</h1>
+<h2 id="1props父子组件传值">1.props父子组件传值</h2>
 <ul>
-<li>父子组件</li>
-<li>兄弟组件</li>
-<li>隔代组件</li>
+<li>父组件通过:名称=“自定义传值”向子组件传值</li>
+<li>子组件通过props接受传递过来的值</li>
 </ul>
-<p>##传值方式</p>
-<h3 id="父子组件间通信">父子组件间通信</h3>
-
+<p>父组件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>  &lt;SearchBox :paramVal<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paramVal&#34;</span> &gt;&lt;/SearchBox&gt;
+</span></span><span style="display:flex;"><span>  this.paramVal <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;父组件向子组件传递的参数值&#39;</span>
+</span></span></code></pre></div><p>子组件接受方法一</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>  props:<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;paramVal&#34;</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>子组件接受方法二</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>   props:<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        paramVal:<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        	//type:类型规定
+</span></span><span style="display:flex;"><span>            type:Number,
+</span></span><span style="display:flex;"><span>            //default:默认值
+</span></span><span style="display:flex;"><span>            default:0,
+</span></span><span style="display:flex;"><span>            //require:是否是必传
+</span></span><span style="display:flex;"><span>            require:true,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>   //使用时直接this.paramVal使用
+</span></span></code></pre></div><h2 id="2emit父子组件传值">2.$emit父子组件传值</h2>
+<ul>
+<li>子传父通过 $emit 实现</li>
+<li>在子组件中通过 $emit 方法传值给父组件</li>
+<li>在父页面中的子组件标签中自定义事件接收</li>
+</ul>
+<p>子组件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>//html
+</span></span><span style="display:flex;"><span>&lt;template&gt;
+</span></span><span style="display:flex;"><span>  &lt;div&gt;
+</span></span><span style="display:flex;"><span>    &lt;button @click<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;giveFun&#34;</span>&gt;传递给父组件&lt;/button&gt;
+</span></span><span style="display:flex;"><span>  &lt;/div&gt;
+</span></span><span style="display:flex;"><span>&lt;/template&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>//js
+</span></span><span style="display:flex;"><span>methods:<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    giveFun<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>        //emit 中第一个值是在父页面中接收的 事件名称 例如：childFun 要同父组件中@后面的名称一致
+</span></span><span style="display:flex;"><span>        //emit 中第二个值是要传递的数据  例如：我是子组件传递的值
+</span></span><span style="display:flex;"><span>        this.$emit<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;childFun&#34;</span>,<span style="color:#e6db74">&#39;我是子组件传递的值&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>父组件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>//html
+</span></span><span style="display:flex;"><span>&lt;template&gt;
+</span></span><span style="display:flex;"><span>  &lt;div&gt;
+</span></span><span style="display:flex;"><span>    &lt;div&gt;我是接收子组件的值:<span style="color:#f92672">{{</span>this.childValue<span style="color:#f92672">}}</span>&lt;/div&gt;
+</span></span><span style="display:flex;"><span>    &lt;Child :count<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span> @childFun<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;acceptFun&#34;</span>&gt;&lt;/Child&gt;
+</span></span><span style="display:flex;"><span>  &lt;/div&gt;
+</span></span><span style="display:flex;"><span>&lt;/template&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>//js
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      childValue:<span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>methods:<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  //子组件调用给父组件传值$emit后会触发父组件的该方法
+</span></span><span style="display:flex;"><span>  acceptFun<span style="color:#f92672">(</span>val<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>    //val代表子组件的传值，用childValue接收
+</span></span><span style="display:flex;"><span>    this.childValue<span style="color:#f92672">=</span>val
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
         </div>
 
         
@@ -204,6 +263,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://my.xyemy.com/post/2022/12/03/vue%E7%88%B6%E7%BB%84%E4%BB%B6%E8%B0%83%E7%94%A8%E5%AD%90%E7%BB%84%E4%BB%B6%E6%96%B9%E6%B3%95.html" title="Vue父组件调用子组件方法">Vue父组件调用子组件方法</a>
+    </li>
+    
+    <li>
         <a href="http://my.xyemy.com/post/2022/12/03/vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC.html" title="Vue组件通信方式">Vue组件通信方式</a>
     </li>
     
@@ -239,10 +302,6 @@
         <a href="http://my.xyemy.com/post/2022/10/26/vue%E9%A1%B9%E7%9B%AE%E5%85%BC%E5%AE%B9ie%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E6%95%B4.html" title="Vue项目兼容ie浏览器调整">Vue项目兼容ie浏览器调整</a>
     </li>
     
-    <li>
-        <a href="http://my.xyemy.com/post/2020/12/24/vueaxios%E5%B0%81%E8%A3%85.html" title="VueAxios封装">VueAxios封装</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -268,7 +327,7 @@
     
     <li><a href="http://my.xyemy.com/categories/layui.html">layui (2)</a></li>
     
-    <li><a href="http://my.xyemy.com/categories/vue.html">Vue (14)</a></li>
+    <li><a href="http://my.xyemy.com/categories/vue.html">Vue (15)</a></li>
     
     <li><a href="http://my.xyemy.com/categories/%E8%A1%A8%E5%8D%95.html">表单 (4)</a></li>
     
