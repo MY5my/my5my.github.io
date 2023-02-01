@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Element Checkbox样式修改 | miao blog</title>
-    <meta property="og:title" content="Element Checkbox样式修改 - miao blog">
+    <title>Vue组件通信方式 | miao blog</title>
+    <meta property="og:title" content="Vue组件通信方式 - miao blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2022-11-01T09:11:15&#43;08:00'>
+    <meta property="article:published_time" content='2022-12-13T16:19:32&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2022-11-01T09:11:15&#43;08:00'>
+    <meta property="article:modified_time" content='2022-12-13T16:19:32&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Element Checkbox样式修改">
+    <meta name="description" content="Vue组件通信方式">
         
     <meta name="author" content="enenen">
-    <meta property="og:url" content="http://my.xyemy.com/post/2022/11/01/element-checkbox%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html">
+    <meta property="og:url" content="http://my.xyemy.com/post/2022/12/03/vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -72,18 +72,16 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Element Checkbox样式修改</h1>
+            <h1 class="post-title">Vue组件通信方式</h1>
         </header>
         <date class="post-meta meta-date">
-            2022年11月1日
+            2022年12月13日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
             <span class="meta-category"><a href='/categories/vue'>Vue</a></span>
-            
-            <span class="meta-category"><a href='/categories/element'>element</a></span>
             
         </div>
         
@@ -95,59 +93,15 @@
         
         
         <div class="post-content">
-            <h2 id="checkbox-样式修改">checkbox 样式修改</h2>
-<blockquote>
-<p>未选中时的样式</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/deep/ .el-checkbox <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    background: <span style="color:#75715e">#fff;</span>
-</span></span><span style="display:flex;"><span>    padding: 10px 10px;
-</span></span><span style="display:flex;"><span>    line-height: 100%;
-</span></span><span style="display:flex;"><span>    border-radius: 4px;
-</span></span><span style="display:flex;"><span>    margin-right: 10px;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><blockquote>
-<p>选中状态时的样式</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/deep/ .el-checkbox.is-checked <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    background: <span style="color:#75715e">#EDF6F2;</span>
-</span></span><span style="display:flex;"><span>    border: 1px solid <span style="color:#75715e">#47A87D;</span>
-</span></span><span style="display:flex;"><span>    padding: 10px 10px;
-</span></span><span style="display:flex;"><span>    border-radius: 4px;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><blockquote>
-<p>选中的 checkbox 样式</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>/deep/ .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner<span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    background-color: <span style="color:#75715e">#47a87d;</span>
-</span></span><span style="display:flex;"><span>    border-color: <span style="color:#75715e">#47a87d;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/deep/ .el-checkbox__input.is-checked+.el-checkbox__label<span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  color: <span style="color:#75715e">#47a87d;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><blockquote>
-<p>选中状态、同时设置了disabled为true的复选框的样式（HTML代码中第一个checkbox的disabled设置为了true</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/deep/ .el-checkbox.is-disabled.is-checked <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  padding: 10px 10px;
-</span></span><span style="display:flex;"><span>  border-radius: 4px;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><blockquote>
-<p>选中状态、且disabled设置为true的checkbox的文本的样式</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/deep/ .el-checkbox__input.is-disabled + span.el-checkbox__label<span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  color: <span style="color:#75715e">#47a87d;</span>
-</span></span><span style="display:flex;"><span>  cursor: not-allowed;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><blockquote>
-<p>选中状态、disabled设置为true的复选框，设置其可勾选方框的样式</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/deep/ .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>background-color: <span style="color:#75715e">#47a87d;</span>
-</span></span><span style="display:flex;"><span>border-color: <span style="color:#75715e">#47a87d;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div>
+            <h2 id="组件之间关系">组件之间关系</h2>
+<ul>
+<li>父子组件</li>
+<li>兄弟组件</li>
+<li>隔代组件</li>
+</ul>
+<p>##传值方式</p>
+<h3 id="父子组件间通信">父子组件间通信</h3>
+
         </div>
 
         
@@ -155,12 +109,29 @@
 
         
 
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/2022/11/01/element-select%E5%85%A8%E9%80%89.html">Element Select全选</a></li>
+        
+        <li><a href="/post/2021/03/21/%E5%AF%BC%E5%87%BA%E6%B5%81%E6%96%87%E4%BB%B6.html">导出流文件</a></li>
+        
+        <li><a href="/post/2022/03/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.html">滚动条样式修改</a></li>
+        
+        <li><a href="/post/2021/12/23/%E5%8A%A8%E6%80%81%E7%BB%99js%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E5%8F%B7.html">动态给Js增加版本号</a></li>
+        
+        <li><a href="/post/2021/02/23/echarts%E5%9B%BE%E6%A0%87%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94x%E8%BD%B4%E6%96%87%E5%AD%97%E8%87%AA%E9%80%82%E5%BA%94.html">Echarts图标宽度自适应x轴文字自适应</a></li>
+        
+    </ul>
+</div>
+
 
         <div class="post-meta meta-tags">
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/checkbox%E6%A0%B7%E5%BC%8F%E8%B0%83%E6%95%B4'>Checkbox样式调整</a></li>
+                <li><a href='/tags/'></a></li>
                 
             </ul>
             

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Nov 2022 09:41:50 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Dec 2022 16:19:32 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue组件通信方式</title>
+      <link>http://my.xyemy.com/post/2022/12/03/vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC.html</link>
+      <pubDate>Tue, 13 Dec 2022 16:19:32 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2022/12/03/vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC.html</guid>
+      <description>组件之间关系 父子组件 兄弟组件 隔代组件 ##</description>
+    </item>
+    
     <item>
       <title>VueRouter点击相同路由报错</title>
       <link>http://my.xyemy.com/post/2022/11/10/vuerouter%E7%82%B9%E5%87%BB%E7%9B%B8%E5%90%8C%E8%B7%AF%E7%94%B1%E6%8A%A5%E9%94%99.html</link>
