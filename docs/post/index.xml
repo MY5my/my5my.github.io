@@ -6,23 +6,23 @@
     <description>Recent content in Posts on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 01 Feb 2023 17:08:08 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Dec 2022 16:19:32 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Vue父组件调用子组件方法</title>
-      <link>http://my.xyemy.com/post/2022/12/03/vue%E7%88%B6%E7%BB%84%E4%BB%B6%E8%B0%83%E7%94%A8%E5%AD%90%E7%BB%84%E4%BB%B6%E6%96%B9%E6%B3%95.html</link>
-      <pubDate>Wed, 01 Feb 2023 17:08:08 +0800</pubDate>
-      
-      <guid>http://my.xyemy.com/post/2022/12/03/vue%E7%88%B6%E7%BB%84%E4%BB%B6%E8%B0%83%E7%94%A8%E5%AD%90%E7%BB%84%E4%BB%B6%E6%96%B9%E6%B3%95.html</guid>
-      <description>子组件 childFun() { console.log(&amp;#3</description>
-    </item>
-    
-    <item>
-      <title>Vue组件通信方式</title>
+      <title>Vue父子组件通信方式</title>
       <link>http://my.xyemy.com/post/2022/12/03/vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC.html</link>
       <pubDate>Tue, 13 Dec 2022 16:19:32 +0800</pubDate>
       
       <guid>http://my.xyemy.com/post/2022/12/03/vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC.html</guid>
-      <description>父子组件间通信 1.props父子组件传值</description>
+      <description>概述： 父子通信： 父向子传递数据是通过 pr</description>
+    </item>
+    
+    <item>
+      <title>Vue兄弟及跨层组件间传值</title>
+      <link>http://my.xyemy.com/post/2022/12/03/vue%E5%85%84%E5%BC%9F%E5%8F%8A%E8%B7%A8%E5%B1%82%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E5%80%BC.html</link>
+      <pubDate>Sat, 03 Dec 2022 17:08:08 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2022/12/03/vue%E5%85%84%E5%BC%9F%E5%8F%8A%E8%B7%A8%E5%B1%82%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E5%80%BC.html</guid>
+      <description>概述： 兄弟通信： Bus、Vuex 跨级通信</description>
     </item>
     
     <item>

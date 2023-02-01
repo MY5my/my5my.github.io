@@ -1,11 +1,17 @@
 ---
-title: "Vue组件通信方式"
+title: "Vue父子组件通信方式"
 date: 2022-12-13T16:19:32+08:00
 draft: false
 tags: [""]
 isCJKLanguage: true
 categories: ["Vue"]
 ---
+# 概述：
+
+>父子通信：
+>父向子传递数据是通过 props，子向父是通过 events（$emit）；通过父链/子链也可以通信（$parent/$children），ref 也可以访问组件实例；provide/inject ； API：$attrs/$listeners
+
+
 # 父子组件间通信
 ## 1.props父子组件传值
 * 父组件通过:名称=“自定义传值”向子组件传值
@@ -81,6 +87,37 @@ methods:{
   acceptFun(val){
     //val代表子组件的传值，用childValue接收
     this.childValue=val
+  }
+}
+```
+
+
+## 3.ref获取组件实例
+* 父组件使用子组件时绑定属性ref
+* 在父组件中可以使用 this.$ref.子组件的ref值.子组件属性或者this.$ref.子组件的ref值.子组件方法
+
+子组件
+```shell script
+data () {
+    return {
+      childValue:"子组件值",
+    },
+},
+methods:{
+    childFun() {
+      alert('父组件会调用子组件中此方法')
+    },
+}
+```
+父组件
+```shell script
+//html
+  <CollectBox  ref="childCollect" @closeDetails="closeDetails"></CollectBox>
+//js
+methods:{
+  closeDetails(){
+   this.$ref.childCollect.childFun()//弹出文本
+   console.log(this.$ref.childCollect.childValue)//会打印子组件值
   }
 }
 ```
