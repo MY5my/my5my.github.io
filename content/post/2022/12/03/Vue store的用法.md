@@ -17,14 +17,29 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 export default new Vuex.Store({
-   state:{
-      count: 100
+// 数据存放状态，初始值
+   state:{  
+      count: 100,//定义变量
    },
+//mutations是操作state数据的方法的集合，比如对该数据的修改、增加、删除等
    mutations: {
-      addCount(state, val = 1) {
+      addCount(state, val = 1) {//操作变量
         state.count += val;
       }
-   }
+   },
+//在mutation方法中进行异步操作，将会引起数据失效。所以提供了Actions来专门进行异步操作，最终提交mutation方法
+    actions:{
+          addCount(context, payload) {
+                context.commit("addCount", payload);
+          },
+    },
+//模块化状态管理
+    modules: { 
+    },
+// 加工state成员给外界
+    getters = { 
+    }
+
 });
 ```
 3. 在main.js 文件中导入,并注册到 vue 根实例中
