@@ -9,7 +9,7 @@ categories: ["Vue"]
 # 概述：
 
 >父子通信：
->父向子传递数据是通过 props，子向父是通过 events（$emit）；通过父链/子链也可以通信（$parent/$children），ref 也可以访问组件实例；provide/inject ； API：$attrs/$listeners
+>父向子传递数据是通过 props，子向父是通过 events（$emit）；通过$parent/$children也可以通信，ref 也可以访问组件实例；provide/inject ； API：$attrs/$listeners
 
 
 # 父子组件间通信

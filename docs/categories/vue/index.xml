@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 13 Dec 2022 16:19:32 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/categories/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vue父子组件通信方式</title>
-      <link>http://my.xyemy.com/post/2022/12/03/vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC.html</link>
+      <link>http://my.xyemy.com/post/2022/12/03/vue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F.html</link>
       <pubDate>Tue, 13 Dec 2022 16:19:32 +0800</pubDate>
       
-      <guid>http://my.xyemy.com/post/2022/12/03/vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC.html</guid>
+      <guid>http://my.xyemy.com/post/2022/12/03/vue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F.html</guid>
       <description>概述： 父子通信： 父向子传递数据是通过 pr</description>
     </item>
     
