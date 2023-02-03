@@ -6,7 +6,16 @@
     <description>Recent content in Tags on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Nov 2022 09:41:50 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Dec 2022 17:50:25 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vuex</title>
+      <link>http://my.xyemy.com/tags/vuex.html</link>
+      <pubDate>Sat, 03 Dec 2022 17:50:25 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/tags/vuex.html</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>router</title>
       <link>http://my.xyemy.com/tags/router.html</link>

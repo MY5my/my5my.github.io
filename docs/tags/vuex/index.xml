@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vuex on miao blog</title>
+    <link>http://my.xyemy.com/tags/vuex.html</link>
+    <description>Recent content in vuex on miao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 03 Dec 2022 17:50:25 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/tags/vuex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue store的用法</title>
+      <link>http://my.xyemy.com/post/2022/12/03/vue-store%E7%9A%84%E7%94%A8%E6%B3%95.html</link>
+      <pubDate>Sat, 03 Dec 2022 17:50:25 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2022/12/03/vue-store%E7%9A%84%E7%94%A8%E6%B3%95.html</guid>
+      <description>使用 store 之前，先要安装 vuex npm install vuex 2.新建 store 文</description>
+    </item>
+    
+  </channel>
+</rss>
