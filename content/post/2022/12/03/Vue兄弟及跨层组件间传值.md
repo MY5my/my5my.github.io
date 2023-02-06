@@ -24,12 +24,26 @@ Bus、Vuex、provide/inject API、$attrs/$listeners
 * 两者之间的自定义属性名保持一致。
 
 
-1.component 文件夹中创建文件 eventBus.js,用来实现兄弟组件通信
+1.component 文件夹中先创建bus.js文件，然后在引用
 ```shell script
-import Vue from "vue";
-export default new Vue()
+import Vue from 'vue'
+// export default new Vue()
+const Bus = new Vue()
+export default Bus
 ```
-2.兄弟组件A中
+2.兄弟组件A中 引用并使用
+* 全局引用
+```shell script
+import Bus from '../src/bus' //这是我的路径，正确引用你们的路径
+Vue.prototype.$bus = Bus 
+```
+
+* 局部引用（在页面中引用）
+```shell script
+import Bus from '@/bus'
+```
+
+
 ```shell script
 //html
 <template>
@@ -65,3 +79,6 @@ mounted(){
 }
 
 ```
+>注意事项
+>on和emit第一个参数一定得是一样的
+在要传值的组件页面中用emit，在要拿到值的兄弟组件页面中用on

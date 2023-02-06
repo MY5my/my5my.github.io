@@ -8,11 +8,11 @@ categories: ["Vue"]
 ---
 
 1. 使用 store 之前，先要安装 vuex 
-```
+```shell script
  npm install vuex
 ```
 2.新建 store 文件夹，再新建 index.js 文件：
-```
+```shell script
 import Vue from "vue";
 import Vuex from "vuex";
 
@@ -43,7 +43,7 @@ export default new Vuex.Store({
 });
 ```
 3. 在main.js 文件中导入,并注册到 vue 根实例中
-```
+```shell script
 import store from './store';
 
 new Vue({

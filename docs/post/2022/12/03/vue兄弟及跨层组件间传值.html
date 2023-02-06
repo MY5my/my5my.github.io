@@ -111,11 +111,22 @@ Bus、Vuex、provide/inject API、$attrs/$listeners</p>
 <li>接收时通过导入的文件调用$on通过回调函数实现</li>
 <li>两者之间的自定义属性名保持一致。</li>
 </ul>
-<p>1.component 文件夹中创建文件 eventBus.js,用来实现兄弟组件通信</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import Vue from <span style="color:#e6db74">&#34;vue&#34;</span>;
-</span></span><span style="display:flex;"><span>export default new Vue<span style="color:#f92672">()</span>
-</span></span></code></pre></div><p>2.兄弟组件A中</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>//html
+<p>1.component 文件夹中先创建bus.js文件，然后在引用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import Vue from <span style="color:#e6db74">&#39;vue&#39;</span>
+</span></span><span style="display:flex;"><span>// export default new Vue<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>const Bus <span style="color:#f92672">=</span> new Vue<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>export default Bus
+</span></span></code></pre></div><p>2.兄弟组件A中 引用并使用</p>
+<ul>
+<li>全局引用</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import Bus from <span style="color:#e6db74">&#39;../src/bus&#39;</span> //这是我的路径，正确引用你们的路径
+</span></span><span style="display:flex;"><span>Vue.prototype.$bus <span style="color:#f92672">=</span> Bus 
+</span></span></code></pre></div><ul>
+<li>局部引用（在页面中引用）</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>import Bus from <span style="color:#e6db74">&#39;@/bus&#39;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>//html
 </span></span><span style="display:flex;"><span>&lt;template&gt;
 </span></span><span style="display:flex;"><span>    &lt;div&gt;
 </span></span><span style="display:flex;"><span>       &lt;button @click<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;send&#34;</span>&gt;A组件给B组件传值&lt;/button&gt;
@@ -145,7 +156,12 @@ Bus、Vuex、provide/inject API、$attrs/$listeners</p>
 </span></span><span style="display:flex;"><span>        this.acceptValue <span style="color:#f92672">=</span> val
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">})</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><blockquote>
+<p>注意事项
+on和emit第一个参数一定得是一样的
+在要传值的组件页面中用emit，在要拿到值的兄弟组件页面中用on</p>
+</blockquote>
+
         </div>
 
         
