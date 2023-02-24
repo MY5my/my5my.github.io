@@ -6,7 +6,16 @@
     <description>Recent content on miao blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Dec 2022 16:19:32 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 15:17:04 +0800</lastBuildDate><atom:link href="http://my.xyemy.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Js移除数组元素</title>
+      <link>http://my.xyemy.com/post/2023/01/05/js%E7%A7%BB%E9%99%A4%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0.html</link>
+      <pubDate>Fri, 24 Feb 2023 15:17:04 +0800</pubDate>
+      
+      <guid>http://my.xyemy.com/post/2023/01/05/js%E7%A7%BB%E9%99%A4%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0.html</guid>
+      <description>forEach()方法 let arr = [1,2,3,4,5,6,7,8,9]; arr.forEach((item,index,arr) =&amp;gt; { if(item ===</description>
+    </item>
+    
     <item>
       <title>Vue父子组件通信方式</title>
       <link>http://my.xyemy.com/post/2022/12/03/vue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F.html</link>
